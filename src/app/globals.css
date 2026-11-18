@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-dark: #123524;
+  --color-brand-primary: #3E7B27;
+  --color-brand-accent: #85A947;
+  --color-brand-sand: #EFE3C2;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  color: #123524;
+  background-color: #FAF7EF; /* Warm sand light background */
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #EFE3C2;
+  color: #123524;
+}
+
+/* Custom focus ring for keyboard accessibility */
+:focus-visible {
+  outline: 2px solid #3E7B27;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #DFCFA5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #85A947;
+}
+
+/* ======================================================== */
+/* COLOR HUNT PALETTE #123524, #3E7B27, #85A947, #EFE3C2    */
+/* Direct utility layer to guarantee instant style rendering*/
+/* ======================================================== */
+.bg-brand-dark { background-color: #123524 !important; }
+.text-brand-dark { color: #123524 !important; }
+.border-brand-dark { border-color: #123524 !important; }
+
+.bg-brand-primary { background-color: #3E7B27 !important; }
+.text-brand-primary { color: #3E7B27 !important; }
+.border-brand-primary { border-color: #3E7B27 !important; }
+
+.bg-brand-accent { background-color: #85A947 !important; }
+.text-brand-accent { color: #85A947 !important; }
+.border-brand-accent { border-color: #85A947 !important; }
+
+.bg-brand-sand { background-color: #EFE3C2 !important; }
+.text-brand-sand { color: #EFE3C2 !important; }
+.border-brand-sand { border-color: #EFE3C2 !important; }
+
+.bg-brand-sandLight { background-color: #FAF7EF !important; }
+.border-brand-sandDark { border-color: #DFCFA5 !important; }
+
+.hover\:bg-brand-primary:hover { background-color: #3E7B27 !important; }
+.hover\:bg-brand-dark:hover { background-color: #123524 !important; }
+.hover\:text-brand-primary:hover { color: #3E7B27 !important; }
+.hover\:text-brand-dark:hover { color: #123524 !important; }
+
+/* Palette Button Styles */
+.btn-brand-primary {
+  background-color: #123524 !important;
+  color: #EFE3C2 !important;
+  border: 1px solid rgba(133, 169, 71, 0.4) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+.btn-brand-primary:hover {
+  background-color: #3E7B27 !important;
+  color: #FFFFFF !important;
+}
+
+.btn-brand-sand {
+  background-color: #EFE3C2 !important;
+  color: #123524 !important;
+  border: 1px solid #DFCFA5 !important;
+  transition: all 0.2s ease-in-out !important;
+}
+.btn-brand-sand:hover {
+  background-color: #DFCFA5 !important;
+}

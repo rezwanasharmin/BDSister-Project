@@ -1,0 +1,282 @@
+"use client";
+
+import React, { useState } from "react";
+import {
+  ShoppingBag,
+  Star,
+  ShieldCheck,
+  CheckCircle2,
+  BadgePercent,
+  Layers,
+  ArrowRight,
+} from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FEATURED_PRODUCTS, SECTION_EXPLAINERS } from "@/data/mockData";
+import { SectionHoverInfo } from "@/components/common/SectionHoverInfo";
+import { ProductItem } from "@/types";
+import { ScrollReveal } from "@/components/common/MotionComponents";
+
+type FilterCategory = "All" | "Products" | "Services" | "Wholesale";
+
+export function ShopShowcase() {
+  const [activeCategory, setActiveCategory] = useState<FilterCategory>("All");
+  const [products] = useState<ProductItem[]>(FEATURED_PRODUCTS);
+
+  const filteredProducts = products.filter((item) => {
+    if (activeCategory === "All") return true;
+    if (activeCategory === "Wholesale") return item.isWholesaleEligible;
+    return item.category === activeCategory;
+  });
+
+  return (
+    <section
+      id="shop"
+      aria-labelledby="shop-heading"
+      className="py-16 bg-white border-b border-[#DFCFA5] overflow-hidden"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <ScrollReveal direction="up">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pb-4 border-b border-[#DFCFA5]/60">
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="p-1.5 rounded-lg bg-[#EFE3C2] text-[#123524] border border-[#DFCFA5]">
+                  <ShoppingBag className="w-4 h-4 text-[#3E7B27]" />
+                </span>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#123524]">
+                  Halal E-Commerce Marketplace
+                </span>
+              </div>
+              <h2
+                id="shop-heading"
+                className="font-serif text-2xl sm:text-3xl font-bold text-[#123524] tracking-tight"
+              >
+                Shop with Us: Sisterhood Commerce
+              </h2>
+              <p className="mt-2 text-sm sm:text-base text-stone-700 max-w-2xl">
+                Buy directly from verified Muslim sisters and trusted brands. Protected with our
+                strict fair-pricing policies, member discounts, and wholesale channels.
+              </p>
+            </div>
+
+            <div className="flex-shrink-0">
+              <SectionHoverInfo
+                explainer={SECTION_EXPLAINERS.shop}
+                sectionName="Shop with Us"
+              />
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* MRP & Sisterhood Pricing Policy Bar in Warm Sand */}
+        <ScrollReveal direction="up" delay={0.1}>
+          <div className="mb-8 p-4 rounded-2xl bg-[#EFE3C2] border border-[#DFCFA5] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[#123524] shadow-xs">
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-[#3E7B27] flex-shrink-0" />
+              <span>
+                <strong>BDSisters Fair Price Rule:</strong> The MRP listed here must be equal or lower than other online platforms.
+              </span>
+            </div>
+            <div className="flex items-center gap-2 font-bold bg-white/70 px-3 py-1 rounded-full border border-[#DFCFA5]">
+              <BadgePercent className="w-4 h-4 text-[#3E7B27]" />
+              <span>ZiniPay Secured Instant Checkout</span>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Category Filters */}
+        <ScrollReveal direction="up" delay={0.15}>
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+            <div className="flex flex-wrap items-center gap-2" role="tablist">
+              {(["All", "Products", "Services", "Wholesale"] as FilterCategory[]).map(
+                (cat) => (
+                  <button
+                    key={cat}
+                    role="tab"
+                    aria-selected={activeCategory === cat}
+                    onClick={() => setActiveCategory(cat)}
+                    className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
+                      activeCategory === cat
+                        ? "bg-[#123524] text-[#EFE3C2] shadow-sm border border-[#85A947]/50"
+                        : "bg-[#FAF7EF] text-[#123524] hover:bg-[#EFE3C2] border border-[#DFCFA5]"
+                    }`}
+                  >
+                    {cat === "All"
+                      ? "All Listings"
+                      : cat === "Products"
+                      ? "Physical Products"
+                      : cat === "Services"
+                      ? "Sister Services"
+                      : "Wholesale Ready"}
+                  </button>
+                )
+              )}
+            </div>
+
+            <div className="flex items-center gap-2 text-xs text-stone-600 font-semibold">
+              <span>Shop by:</span>
+              <a href="#brands" className="underline hover:text-[#3E7B27]">
+                Brand Profiles
+              </a>
+              <span>•</span>
+              <a href="#sisters" className="underline hover:text-[#3E7B27]">
+                Sisters&apos; Profiles
+              </a>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Products Grid with Smooth Reorder & Layout Animation */}
+        <motion.div
+          layout
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 min-h-[420px]"
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredProducts.map((product) => {
+              const discountPercent = Math.round(
+                ((product.mrpPrice - product.specialDiscountPrice) /
+                  product.mrpPrice) *
+                  100
+              );
+
+              return (
+                <motion.div
+                  key={product.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.92, y: 16 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.92, y: -16 }}
+                  transition={{
+                    duration: 0.35,
+                    ease: [0.21, 0.47, 0.32, 0.98],
+                  }}
+                  whileHover={{ y: -6, transition: { duration: 0.2 } }}
+                  className="group h-full rounded-2xl border border-[#DFCFA5] bg-white hover:shadow-xl hover:border-[#3E7B27] transition-colors flex flex-col justify-between overflow-hidden"
+                >
+                  <div>
+                    {/* Product Image Box */}
+                    <div className="relative h-48 w-full bg-[#FAF7EF] overflow-hidden">
+                      <img
+                        src={product.imageUrl}
+                        alt={product.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.onerror = null;
+                          e.currentTarget.src =
+                            "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80";
+                        }}
+                      />
+
+                      {/* Category & Discount Badges */}
+                      <div className="absolute top-2 left-2 flex flex-col gap-1">
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#123524]/90 text-[#EFE3C2] backdrop-blur-xs border border-[#85A947]/40">
+                          {product.category}
+                        </span>
+                        {discountPercent > 0 && (
+                          <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#3E7B27] text-white shadow-xs">
+                            Save {discountPercent}%
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Wholesale Availability Badge */}
+                      <div className="absolute bottom-2 right-2">
+                        {product.isWholesaleEligible ? (
+                          <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#123524] text-[#EFE3C2] border border-[#85A947]/60 shadow-xs flex items-center gap-1">
+                            <Layers className="w-3 h-3 text-[#85A947]" /> Wholesale Ready
+                          </span>
+                        ) : (
+                          <span className="px-2 py-0.5 rounded-full text-[9px] font-medium bg-black/60 text-white backdrop-blur-xs">
+                            Retail Only
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Content Info */}
+                    <div className="p-4 space-y-2">
+                      {/* Brand and Sister Seller */}
+                      <div className="flex items-center justify-between text-[11px] text-stone-600">
+                        <span className="font-bold text-[#123524] flex items-center gap-1">
+                          {product.brandName}
+                          {product.brandVerified && (
+                            <CheckCircle2 className="w-3 h-3 text-[#3E7B27] inline" />
+                          )}
+                        </span>
+                        <span className="font-medium">By {product.sellerSister}</span>
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-sm font-bold text-[#123524] line-clamp-2 group-hover:text-[#3E7B27] transition-colors leading-snug">
+                        {product.title}
+                      </h3>
+
+                      {/* Ratings */}
+                      <div className="flex items-center gap-1.5 text-xs">
+                        <div className="flex items-center text-amber-500">
+                          <Star className="w-3.5 h-3.5 fill-current" />
+                        </div>
+                        <span className="font-bold text-stone-800">
+                          {product.rating}
+                        </span>
+                        <span className="text-[11px] text-stone-500">
+                          ({product.totalReviews} reviews)
+                        </span>
+                      </div>
+
+                      {/* Price Block */}
+                      <div className="pt-2 border-t border-[#DFCFA5]/50 flex items-baseline gap-2">
+                        <span className="text-base font-extrabold text-[#123524] font-serif">
+                          ৳{product.specialDiscountPrice.toLocaleString()}
+                        </span>
+                        <span className="text-xs text-stone-400 line-through">
+                          MRP ৳{product.mrpPrice.toLocaleString()}
+                        </span>
+                      </div>
+
+                      {/* Wholesale Price Info if Eligible */}
+                      {product.isWholesaleEligible && product.wholesaleUnitPrice && (
+                        <div className="p-2 rounded-xl bg-[#FAF7EF] border border-[#DFCFA5] text-[11px] text-[#123524]">
+                          Wholesale: <strong>৳{product.wholesaleUnitPrice}</strong> / pc (Min {product.wholesaleMinQuantity} pcs)
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Card Bottom CTA */}
+                  <div className="p-4 pt-0">
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      type="button"
+                      className="w-full py-2.5 px-3 rounded-xl bg-[#123524] text-[#EFE3C2] text-xs font-bold hover:bg-[#3E7B27] hover:text-white transition-colors flex items-center justify-center gap-1.5 shadow-xs border border-[#85A947]/40"
+                    >
+                      <ShoppingBag className="w-3.5 h-3.5 text-[#85A947]" />
+                      <span>View & Purchase</span>
+                    </motion.button>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
+        </motion.div>
+
+        {/* View All Marketplace CTA */}
+        <ScrollReveal direction="up" delay={0.2}>
+          <div className="mt-10 text-center">
+            <motion.a
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              href="#full-marketplace"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#123524] text-[#EFE3C2] text-xs font-bold hover:bg-[#3E7B27] hover:text-white transition-all shadow-md border border-[#85A947]/50"
+            >
+              <span>Explore All Products & Services in Directory</span>
+              <ArrowRight className="w-4 h-4 text-[#85A947]" />
+            </motion.a>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
