@@ -22,7 +22,7 @@ const SISTERHOOD_PRINCIPLES = [
   {
     title: "Ukhuwwah (Sincere Sisterhood)",
     desc: "A safe space devoid of toxic competition, vanity, or negativity; prioritizing mutual uplift and empathy.",
-    icon: <Heart className="w-5 h-5 text-[#173330]" />,
+    icon: <Heart className="w-5 h-5 text-[#111E28]" />,
   },
   {
     title: "Ihsan (Excellence in Craft)",
@@ -52,24 +52,24 @@ export function AboutValuesSection() {
     <section
       id="who-we-are"
       aria-labelledby="about-heading"
-      className="py-16 bg-[#FAF5EE] border-b border-[#E8D0B8] overflow-hidden"
+      className="py-16 bg-[#FAF8F5] border-b border-[#F7DFC7] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal direction="up">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-[#E8D0B8]/60">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-[#F7DFC7]/60">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <span className="p-1.5 rounded-lg bg-[#F7DFC7] text-[#173330] border border-[#E8D0B8]">
+                <span className="p-1.5 rounded-lg bg-[#F7DFC7] text-[#111E28] border border-[#F7DFC7]">
                   <Compass className="w-4 h-4 text-[#5B9891]" />
                 </span>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#173330]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#111E28]">
                   Ethos & Governance
                 </span>
               </div>
               <h2
                 id="about-heading"
-                className="font-serif text-2xl sm:text-3xl font-bold text-[#173330] tracking-tight"
+                className="font-serif text-2xl sm:text-3xl font-bold text-[#111E28] tracking-tight"
               >
                 Who We Are: Mission & Sisterhood Principles
               </h2>
@@ -97,12 +97,12 @@ export function AboutValuesSection() {
           <StaggerItem>
             <motion.div
               whileHover={{ y: -4, transition: { duration: 0.25 } }}
-              className="h-full p-8 rounded-2xl bg-white border-2 border-[#E8D0B8] shadow-md relative overflow-hidden"
+              className="h-full p-8 rounded-2xl bg-white border-2 border-[#F7DFC7] shadow-md relative overflow-hidden"
             >
-              <div className="w-11 h-11 rounded-2xl bg-[#F7DFC7] text-[#173330] flex items-center justify-center mb-4 border border-[#E8D0B8]">
+              <div className="w-11 h-11 rounded-2xl bg-[#F7DFC7] text-[#111E28] flex items-center justify-center mb-4 border border-[#F7DFC7]">
                 <Compass className="w-5 h-5 text-[#5B9891]" />
               </div>
-              <h3 className="font-serif text-xl font-bold text-[#173330] mb-2">
+              <h3 className="font-serif text-xl font-bold text-[#111E28] mb-2">
                 Our Mission
               </h3>
               <p className="text-sm text-stone-700 leading-relaxed">
@@ -117,12 +117,12 @@ export function AboutValuesSection() {
           <StaggerItem>
             <motion.div
               whileHover={{ y: -4, transition: { duration: 0.25 } }}
-              className="h-full p-8 rounded-2xl bg-white border-2 border-[#E8D0B8] shadow-md relative overflow-hidden"
+              className="h-full p-8 rounded-2xl bg-white border-2 border-[#F7DFC7] shadow-md relative overflow-hidden"
             >
-              <div className="w-11 h-11 rounded-2xl bg-[#D98408]/20 text-[#173330] flex items-center justify-center mb-4 border border-[#D98408]/50">
+              <div className="w-11 h-11 rounded-2xl bg-[#D98408]/20 text-[#111E28] flex items-center justify-center mb-4 border border-[#D98408]/50">
                 <Eye className="w-5 h-5 text-[#5B9891]" />
               </div>
-              <h3 className="font-serif text-xl font-bold text-[#173330] mb-2">
+              <h3 className="font-serif text-xl font-bold text-[#111E28] mb-2">
                 Our Vision
               </h3>
               <p className="text-sm text-stone-700 leading-relaxed">
@@ -137,7 +137,7 @@ export function AboutValuesSection() {
         {/* Sisterhood Principles Grid */}
         <div className="space-y-4">
           <ScrollReveal direction="up">
-            <h3 className="font-serif text-lg font-bold text-[#173330]">
+            <h3 className="font-serif text-lg font-bold text-[#111E28]">
               Core Sisterhood Principles
             </h3>
           </ScrollReveal>
@@ -150,12 +150,12 @@ export function AboutValuesSection() {
               <StaggerItem key={idx}>
                 <motion.div
                   whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                  className="h-full p-5 rounded-2xl bg-white border border-[#E8D0B8] shadow-sm hover:border-[#5B9891] hover:shadow-md transition-all"
+                  className="h-full p-5 rounded-2xl bg-white border border-[#F7DFC7] shadow-sm hover:border-[#5B9891] hover:shadow-md transition-all"
                 >
-                  <div className="p-2.5 rounded-xl bg-[#FAF5EE] w-fit mb-3 border border-[#E8D0B8]">
+                  <div className="p-2.5 rounded-xl bg-[#FAF8F5] w-fit mb-3 border border-[#F7DFC7]">
                     {principle.icon}
                   </div>
-                  <h4 className="text-sm font-bold text-[#173330] mb-1.5">
+                  <h4 className="text-sm font-bold text-[#111E28] mb-1.5">
                     {principle.title}
                   </h4>
                   <p className="text-xs text-stone-600 leading-relaxed">

@@ -102,7 +102,7 @@ export const SISTER_WINGS: WingItem[] = [
     tagline: "Parenting & Homeschooling Discussions",
     roleInBDSisters: "Synergizes parenting circles, curriculum guidance, and child-rearing forums.",
     iconName: "Baby",
-    badgeColor: "bg-[#5B9891]/15 text-[#173330] border-[#5B9891]/30",
+    badgeColor: "bg-[#5B9891]/15 text-[#111E28] border-[#5B9891]/30",
     linkUrl: "#cop-wing",
   },
   {
@@ -122,7 +122,7 @@ export const SISTER_WINGS: WingItem[] = [
     tagline: "Featured Contributors & Thought Leadership",
     roleInBDSisters: "Showcases opinion pieces, creative writing, and academic articles by sisters.",
     iconName: "PenTool",
-    badgeColor: "bg-[#F7DFC7] text-[#173330] border-[#E8D0B8]",
+    badgeColor: "bg-[#F7DFC7] text-[#111E28] border-[#F7DFC7]",
     linkUrl: "#midj-wing",
   },
   {
@@ -132,7 +132,7 @@ export const SISTER_WINGS: WingItem[] = [
     tagline: "Vendor Registrations & Halal Artisan Guild",
     roleInBDSisters: "Empowers home-based makers, artisans, and women-led suppliers.",
     iconName: "Store",
-    badgeColor: "bg-[#5B9891]/20 text-[#173330] border-[#5B9891]/40",
+    badgeColor: "bg-[#5B9891]/20 text-[#111E28] border-[#5B9891]/40",
     linkUrl: "#hut-network",
   },
   {
@@ -142,7 +142,7 @@ export const SISTER_WINGS: WingItem[] = [
     tagline: "Sisterhood Skills & Development",
     roleInBDSisters: "Connects aspiring sisters with established role models for career guidance.",
     iconName: "Compass",
-    badgeColor: "bg-[#D98408]/15 text-[#173330] border-[#D98408]/30",
+    badgeColor: "bg-[#D98408]/15 text-[#111E28] border-[#D98408]/30",
     linkUrl: "#imbd-wing",
   },
 ];

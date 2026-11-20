@@ -21,7 +21,7 @@ export function HeroSection() {
     <section
       id="hero"
       aria-labelledby="hero-title"
-      className="relative overflow-hidden bg-gradient-to-b from-[#FAF5EE] via-[#FAF5EE] to-[#F7DFC7]/30 pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-[#E8D0B8]"
+      className="relative overflow-hidden bg-gradient-to-b from-[#FAF8F5] via-[#FAF8F5] to-[#F7DFC7]/30 pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-[#F7DFC7]"
     >
       {/* Decorative Background Glows with gentle breathing animation */}
       <motion.div
@@ -53,7 +53,7 @@ export function HeroSection() {
         {/* Section Hover Explainer Button */}
         <ScrollReveal direction="down" duration={0.5}>
           <div className="flex items-center justify-between gap-4 mb-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F7DFC7] text-[#173330] text-xs font-bold tracking-wide border border-[#E8D0B8] shadow-2xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F7DFC7] text-[#111E28] text-xs font-bold tracking-wide border border-[#F7DFC7] shadow-2xs">
               <Sparkles className="w-3.5 h-3.5 text-[#5B9891]" />
               <span>Unified Database of Muhsina Organization</span>
             </div>
@@ -70,12 +70,12 @@ export function HeroSection() {
           <div className="lg:col-span-7 space-y-6">
             <ScrollReveal direction="up" delay={0.1}>
               <div className="space-y-3">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#173330] bg-[#F7DFC7] px-3.5 py-1.5 rounded-full border border-[#E8D0B8] inline-block shadow-2xs">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#111E28] bg-[#F7DFC7] px-3.5 py-1.5 rounded-full border border-[#F7DFC7] inline-block shadow-2xs">
                   A Collaborative Sisterhood Ecosystem
                 </span>
                 <h1
                   id="hero-title"
-                  className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#173330] leading-[1.18] tracking-tight"
+                  className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#111E28] leading-[1.18] tracking-tight"
                 >
                   Commerce + Community <br />
                   <span className="text-[#5B9891]">
@@ -89,14 +89,14 @@ export function HeroSection() {
               <p className="text-base sm:text-lg text-stone-700 leading-relaxed max-w-2xl font-normal">
                 A dignified, member-based online haven connecting verified personal profiles,
                 women-owned halal businesses, safe discussion forums, and skill exchange—anchored
-                under the unified umbrella of <strong className="text-[#173330] font-bold">Muhsina Organization</strong>.
+                under the unified umbrella of <strong className="text-[#111E28] font-bold">Muhsina Organization</strong>.
               </p>
             </ScrollReveal>
 
             {/* Core Verification Badges (Referral + NID Vetting) */}
             <ScrollReveal direction="up" delay={0.3}>
-              <div className="p-5 rounded-2xl bg-white border-2 border-[#E8D0B8] shadow-sm space-y-3">
-                <div className="flex items-center gap-2 text-xs font-bold text-[#173330] uppercase tracking-wider">
+              <div className="p-5 rounded-2xl bg-white border-2 border-[#F7DFC7] shadow-sm space-y-3">
+                <div className="flex items-center gap-2 text-xs font-bold text-[#111E28] uppercase tracking-wider">
                   <ShieldCheck className="w-4 h-4 text-[#5B9891]" />
                   <span>Our Sacred Trust & Vetting Guarantee</span>
                 </div>
@@ -104,25 +104,25 @@ export function HeroSection() {
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#5B9891] flex-shrink-0 mt-0.5" />
                     <span>
-                      <strong className="text-[#173330]">Referral Mandatory:</strong> Existing member must know you in person.
+                      <strong className="text-[#111E28]">Referral Mandatory:</strong> Existing member must know you in person.
                     </span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#5B9891] flex-shrink-0 mt-0.5" />
                     <span>
-                      <strong className="text-[#173330]">NID/Passport Verified:</strong> Reviewed privately by female admins only.
+                      <strong className="text-[#111E28]">NID/Passport Verified:</strong> Reviewed privately by female admins only.
                     </span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#5B9891] flex-shrink-0 mt-0.5" />
                     <span>
-                      <strong className="text-[#173330]">Free Personal Profile:</strong> Create & publish your profile for free.
+                      <strong className="text-[#111E28]">Free Personal Profile:</strong> Create & publish your profile for free.
                     </span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#5B9891] flex-shrink-0 mt-0.5" />
                     <span>
-                      <strong className="text-[#173330]">Field-Level Privacy:</strong> Phone & WhatsApp hidden by default.
+                      <strong className="text-[#111E28]">Field-Level Privacy:</strong> Phone & WhatsApp hidden by default.
                     </span>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export function HeroSection() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   href="#auth-register"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#173330] hover:bg-[#5B9891] text-[#F7DFC7] hover:text-white font-bold text-sm shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#5B9891] border border-[#D98408]/50"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#D98408] hover:bg-[#B86E04] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#5B9891] border border-[#F2B55D]"
                 >
                   <span>Join as a Sister (Referral Required)</span>
                   <ArrowRight className="w-4 h-4 text-[#D98408]" />
@@ -146,15 +146,15 @@ export function HeroSection() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   href="#shop"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-white text-[#173330] font-bold text-sm border border-[#E8D0B8] hover:bg-[#F7DFC7] shadow-2xs transition-all focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-[#5B9891] hover:bg-[#477C76] text-white font-bold text-sm border border-[#5B9891] shadow-2xs transition-all focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
                 >
-                  <ShoppingBag className="w-4 h-4 text-[#5B9891]" />
+                  <ShoppingBag className="w-4 h-4 text-[#F7DFC7]" />
                   <span>Shop Halal Goods & Services</span>
                 </motion.a>
 
                 <a
                   href="#forums"
-                  className="inline-flex items-center justify-center gap-1.5 px-4 py-3.5 rounded-full text-[#173330] hover:text-[#5B9891] font-bold text-xs transition-colors"
+                  className="inline-flex items-center justify-center gap-1.5 px-4 py-3.5 rounded-full text-[#111E28] hover:text-[#5B9891] font-bold text-xs transition-colors"
                 >
                   <Users className="w-4 h-4 text-[#5B9891]" />
                   <span>Preview Forums</span>
@@ -169,17 +169,17 @@ export function HeroSection() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.3 }}
-                className="relative mx-auto max-w-md rounded-2xl bg-white p-6 shadow-xl border-2 border-[#E8D0B8]"
+                className="relative mx-auto max-w-md rounded-2xl bg-white p-6 shadow-xl border-2 border-[#F7DFC7]"
               >
                 {/* Top Card Badge */}
-                <div className="flex items-center justify-between pb-4 border-b border-[#E8D0B8]">
+                <div className="flex items-center justify-between pb-4 border-b border-[#F7DFC7]">
                   <div className="flex items-center gap-2">
                     <span className="w-3 h-3 rounded-full bg-[#5B9891] animate-pulse" />
-                    <span className="text-xs font-bold text-[#173330]">
+                    <span className="text-xs font-bold text-[#111E28]">
                       Unified Profile Preview
                     </span>
                   </div>
-                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-[#F7DFC7] text-[#173330] border border-[#E8D0B8]">
+                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-[#F7DFC7] text-[#111E28] border border-[#F7DFC7]">
                     Status: Approved & Verified
                   </span>
                 </div>
@@ -188,11 +188,11 @@ export function HeroSection() {
                 <div className="mt-5 space-y-4">
                   <div className="flex items-start gap-4">
                     {/* Square Profile Picture */}
-                    <div className="w-20 h-20 rounded-2xl bg-[#173330] text-[#F7DFC7] flex items-center justify-center flex-shrink-0 shadow-inner font-serif text-2xl font-bold border-2 border-[#D98408]">
+                    <div className="w-20 h-20 rounded-2xl bg-[#5B9891] text-[#F7DFC7] border-2 border-[#D98408] flex items-center justify-center flex-shrink-0 shadow-inner font-serif text-2xl font-bold border-2 border-[#D98408]">
                       S.A.
                     </div>
                     <div className="space-y-1">
-                      <h3 className="text-base font-bold text-[#173330] leading-tight">
+                      <h3 className="text-base font-bold text-[#111E28] leading-tight">
                         Dr. Samira Ahmed
                       </h3>
                       <p className="text-xs text-stone-600 font-medium">
@@ -205,13 +205,13 @@ export function HeroSection() {
                   </div>
 
                   {/* Privacy Indicators */}
-                  <div className="bg-[#FAF5EE] p-3 rounded-xl border border-[#E8D0B8] space-y-2 text-xs">
+                  <div className="bg-[#FAF8F5] p-3 rounded-xl border border-[#F7DFC7] space-y-2 text-xs">
                     <div className="flex items-center justify-between text-stone-700">
                       <span className="flex items-center gap-1.5 font-medium">
                         <Lock className="w-3.5 h-3.5 text-stone-400" />
                         <span>Phone & WhatsApp</span>
                       </span>
-                      <span className="text-[11px] font-bold text-stone-700 bg-white px-2.5 py-0.5 rounded border border-[#E8D0B8]">
+                      <span className="text-[11px] font-bold text-stone-700 bg-white px-2.5 py-0.5 rounded border border-[#F7DFC7]">
                         Private (Protected)
                       </span>
                     </div>
@@ -220,7 +220,7 @@ export function HeroSection() {
                         <FileCheck className="w-3.5 h-3.5 text-[#5B9891]" />
                         <span>ID Verification (NID)</span>
                       </span>
-                      <span className="text-[11px] font-bold text-[#173330] bg-[#F7DFC7] px-2.5 py-0.5 rounded border border-[#E8D0B8]">
+                      <span className="text-[11px] font-bold text-[#111E28] bg-[#F7DFC7] px-2.5 py-0.5 rounded border border-[#F7DFC7]">
                         Admin Verified
                       </span>
                     </div>
@@ -228,14 +228,14 @@ export function HeroSection() {
 
                   {/* Connected Brands */}
                   <div className="pt-1">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#173330] block mb-1.5">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#111E28] block mb-1.5">
                       Registered Sister Brands (2)
                     </span>
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-2.5 py-1 rounded-lg bg-[#FAF5EE] border border-[#E8D0B8] text-xs font-bold text-[#173330]">
+                      <span className="px-2.5 py-1 rounded-lg bg-[#FAF8F5] border border-[#F7DFC7] text-xs font-bold text-[#111E28]">
                         🌿 PureTadabbur Botanicals
                       </span>
-                      <span className="px-2.5 py-1 rounded-lg bg-[#FAF5EE] border border-[#E8D0B8] text-xs font-bold text-[#173330]">
+                      <span className="px-2.5 py-1 rounded-lg bg-[#FAF8F5] border border-[#F7DFC7] text-xs font-bold text-[#111E28]">
                         📖 Fitrah Wellness Consulting
                       </span>
                     </div>
@@ -243,11 +243,11 @@ export function HeroSection() {
 
                   {/* Sample Vocational Skill Bar */}
                   <div className="space-y-1.5 pt-1">
-                    <div className="flex justify-between text-xs font-semibold text-[#173330]">
+                    <div className="flex justify-between text-xs font-semibold text-[#111E28]">
                       <span>Herbal Formulation & Naturopathy</span>
                       <span className="text-[#5B9891] font-bold">Level 5 / Master</span>
                     </div>
-                    <div className="w-full h-2 rounded-full bg-[#FAF5EE] border border-[#E8D0B8] overflow-hidden">
+                    <div className="w-full h-2 rounded-full bg-[#FAF8F5] border border-[#F7DFC7] overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: "90%" }}

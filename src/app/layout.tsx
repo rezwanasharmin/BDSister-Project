@@ -39,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${inter.className}`}>
-      <body className="min-h-screen flex flex-col bg-[#FAF5EE] text-[#173330] antialiased selection:bg-[#F7DFC7] selection:text-[#173330]">
+      <body className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#111E28] antialiased selection:bg-[#F7DFC7] selection:text-[#111E28]">
         {/* Sacred Announcement & Network Top Bar */}
         <TopAnnouncement />
 

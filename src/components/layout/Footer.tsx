@@ -7,34 +7,34 @@ import {
 
 export function Footer() {
   return (
-    <footer className="bg-[#173330] text-[#F7DFC7] text-xs border-t border-[#D98408]/30">
+    <footer className="bg-[#0B151D] text-stone-300 text-xs border-t border-[#5B9891]/30">
       {/* Top Banner inside Footer: Wings Directory */}
-      <div className="border-b border-[#5B9891]/40 bg-black/25 py-6">
+      <div className="border-b border-[#5B9891]/25 bg-[#070E14] py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <Building2 className="w-4 h-4 text-[#D98408]" />
+              <Building2 className="w-4 h-4 text-[#F2B55D]" />
               <span className="font-bold text-white text-xs">
                 Muhsina Organization Wing Ecosystem:
               </span>
             </div>
-            <div className="flex flex-wrap items-center gap-3 text-[#F7DFC7]/80 text-xs font-medium">
+            <div className="flex flex-wrap items-center gap-3 text-[#F7DFC7]/85 text-xs font-medium">
               <span className="hover:text-white transition-colors cursor-pointer">
                 CoP (Parenting & Homeschooling)
               </span>
-              <span className="text-[#D98408]/60">•</span>
+              <span className="text-stone-600">•</span>
               <span className="hover:text-white transition-colors cursor-pointer">
                 TSPP (Publications)
               </span>
-              <span className="text-[#D98408]/60">•</span>
+              <span className="text-stone-600">•</span>
               <span className="hover:text-white transition-colors cursor-pointer">
                 MIDJ (Journalism & Dialogues)
               </span>
-              <span className="text-[#D98408]/60">•</span>
+              <span className="text-stone-600">•</span>
               <span className="hover:text-white transition-colors cursor-pointer">
                 The Hut Network (Halal Artisans)
               </span>
-              <span className="text-[#D98408]/60">•</span>
+              <span className="text-stone-600">•</span>
               <span className="hover:text-white transition-colors cursor-pointer">
                 IMBD (Mentorship)
               </span>
@@ -49,7 +49,7 @@ export function Footer() {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-[#5B9891] text-[#F7DFC7] flex items-center justify-center font-serif text-xl font-bold border border-[#D98408]/60 shadow-sm">
+              <div className="w-10 h-10 rounded-2xl bg-[#5B9891] text-[#F7DFC7] flex items-center justify-center font-serif text-xl font-bold border border-[#F2B55D]/60 shadow-sm">
                 BD
               </div>
               <span className="font-serif text-xl font-bold text-white">
@@ -60,9 +60,9 @@ export function Footer() {
               The unified database, digital community, and halal commerce platform dedicated
               to supporting Muslim sisters with modesty, dignity, and economic empowerment.
             </p>
-            <div className="p-4 rounded-xl bg-black/30 border border-[#D98408]/40 text-[11px] text-[#F7DFC7]/90 space-y-1">
-              <div className="flex items-center gap-1.5 text-[#D98408] font-bold">
-                <ShieldCheck className="w-4 h-4" />
+            <div className="p-4 rounded-xl bg-[#12202B] border border-[#5B9891]/40 text-[11px] text-[#F7DFC7]/90 space-y-1">
+              <div className="flex items-center gap-1.5 text-[#F2B55D] font-bold">
+                <ShieldCheck className="w-4 h-4 text-[#5B9891]" />
                 <span>KYC Data Protection Guarantee</span>
               </div>
               <p className="leading-relaxed">
@@ -119,64 +119,76 @@ export function Footer() {
               </li>
               <li>
                 <a href="#shop" className="hover:text-white transition-colors">
-                  Fair MRP Guarantee Policy
+                  Fair Price Guarantee Policy
                 </a>
               </li>
               <li>
-                <a href="#who-we-are" className="hover:text-white transition-colors">
-                  Sisterhood Principles (Amanah)
+                <a href="#about" className="hover:text-white transition-colors">
+                  Sisterhood Code of Conduct
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-white transition-colors">
-                  Report a Concern / Moderation
+                <a href="#hero" className="hover:text-white transition-colors">
+                  Field-Level Privacy Controls
                 </a>
               </li>
               <li>
-                <span className="text-[#D98408] font-semibold">ZiniPay Payment Gateway Secured</span>
+                <a href="#newsletter" className="hover:text-white transition-colors">
+                  Vetted Telegram & WhatsApp
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Resources & Support */}
+          {/* Sister Wings Connected */}
           <div className="space-y-3">
             <h4 className="text-white font-bold uppercase tracking-wider text-[11px]">
-              Resources & Connect
+              Sister Organizations
             </h4>
             <ul className="space-y-2 text-[#F7DFC7]/80">
               <li>
-                <a href="#events" className="hover:text-white transition-colors">
-                  Events & Workshops Calendar
+                <a href="#unified-wings" className="hover:text-white transition-colors">
+                  Circle of Parents (CoP)
                 </a>
               </li>
               <li>
-                <a href="#resources" className="hover:text-white transition-colors">
-                  Downloadable Study Kits
+                <a href="#unified-wings" className="hover:text-white transition-colors">
+                  The Sacred Path Publications
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-white transition-colors">
-                  Official WhatsApp & Telegram
+                <a href="#unified-wings" className="hover:text-white transition-colors">
+                  MIDJ Journalism Wing
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-white transition-colors">
-                  Direct Inquiries & Helpdesk
+                <a href="#unified-wings" className="hover:text-white transition-colors">
+                  The Hut Artisan Guild
+                </a>
+              </li>
+              <li>
+                <a href="#unified-wings" className="hover:text-white transition-colors">
+                  Muhsina Organization Main Hub
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-6 border-t border-[#5B9891]/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#F7DFC7]/70">
-          <p>
-            © {new Date().getFullYear()} BDSisters.org — An autonomous initiative under{" "}
-            <strong className="text-white font-bold">Muhsina Organization</strong>. All rights reserved.
-          </p>
-          <div className="flex items-center gap-1 text-[#F7DFC7]">
-            <span>Built with Amanah, Ihsan & Sincere Sisterhood</span>
-            <Heart className="w-3.5 h-3.5 text-rose-400 fill-current ml-0.5" />
+        {/* Bottom Copyright & Sacred Sign-off */}
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-stone-400">
+          <div className="flex items-center gap-1 text-center sm:text-left">
+            <span>© {new Date().getFullYear()} BDSisters.org — Dedicated with</span>
+            <Heart className="w-3.5 h-3.5 text-[#D98408] inline fill-current" />
+            <span>for Muslim Sisters Worldwide.</span>
+          </div>
+
+          <div className="flex items-center gap-4 text-xs">
+            <span className="text-[#5B9891] font-bold">
+              Umbrella of Muhsina Organization
+            </span>
+            <span>•</span>
+            <span className="text-[#F2B55D] font-medium">Halal Secured by ZiniPay</span>
           </div>
         </div>
       </div>

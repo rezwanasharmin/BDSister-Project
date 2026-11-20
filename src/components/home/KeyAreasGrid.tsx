@@ -38,24 +38,24 @@ export function KeyAreasGrid() {
     <section
       id="key-areas"
       aria-labelledby="key-areas-title"
-      className="py-16 bg-[#FAF5EE] border-b border-[#E8D0B8] overflow-hidden"
+      className="py-16 bg-[#FAF8F5] border-b border-[#F7DFC7] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal direction="up">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-[#E8D0B8]/60">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-[#F7DFC7]/60">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <span className="p-1.5 rounded-lg bg-[#F7DFC7] text-[#173330] border border-[#E8D0B8]">
+                <span className="p-1.5 rounded-lg bg-[#F7DFC7] text-[#111E28] border border-[#F7DFC7]">
                   <Sparkles className="w-4 h-4 text-[#5B9891]" />
                 </span>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#173330]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#111E28]">
                   Platform Architecture
                 </span>
               </div>
               <h2
                 id="key-areas-title"
-                className="font-serif text-2xl sm:text-3xl font-bold text-[#173330] tracking-tight"
+                className="font-serif text-2xl sm:text-3xl font-bold text-[#111E28] tracking-tight"
               >
                 8 Key Areas That Power BDSisters.org
               </h2>
@@ -97,7 +97,7 @@ export function KeyAreasGrid() {
                   className={`h-full text-left p-5 rounded-2xl border transition-all duration-200 cursor-pointer flex flex-col justify-between ${
                     isSelected
                       ? "bg-white border-[#5B9891] ring-2 ring-[#5B9891]/30 shadow-md"
-                      : "bg-white border-[#E8D0B8] hover:border-[#5B9891] hover:shadow-sm"
+                      : "bg-white border-[#F7DFC7] hover:border-[#5B9891] hover:shadow-sm"
                   }`}
                 >
                   <div>
@@ -105,8 +105,8 @@ export function KeyAreasGrid() {
                       <span
                         className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold font-serif border ${
                           isSelected
-                            ? "bg-[#173330] text-[#F7DFC7] border-[#D98408]"
-                            : "bg-[#F7DFC7] text-[#173330] border-[#E8D0B8]"
+                            ? "bg-[#5B9891] text-white border-[#D98408]"
+                            : "bg-[#F7DFC7] text-[#111E28] border-[#F7DFC7]"
                         }`}
                       >
                         0{area.id}
@@ -114,15 +114,15 @@ export function KeyAreasGrid() {
                       <span
                         className={`p-2 rounded-xl transition-colors ${
                           isSelected
-                            ? "bg-[#173330] text-[#F7DFC7]"
-                            : "bg-[#FAF5EE] text-[#173330] border border-[#E8D0B8]"
+                            ? "bg-[#5B9891] text-white"
+                            : "bg-[#FAF8F5] text-[#111E28] border border-[#F7DFC7]"
                         }`}
                       >
                         {icon}
                       </span>
                     </div>
 
-                    <h3 className="text-sm font-bold text-[#173330] leading-snug">
+                    <h3 className="text-sm font-bold text-[#111E28] leading-snug">
                       {area.title}
                     </h3>
                     <p className="text-[11px] font-semibold text-[#5B9891] mt-0.5">
@@ -133,7 +133,7 @@ export function KeyAreasGrid() {
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-[#E8D0B8]/60 flex items-center justify-between text-[11px] font-bold text-[#173330]">
+                  <div className="mt-4 pt-3 border-t border-[#F7DFC7]/60 flex items-center justify-between text-[11px] font-bold text-[#111E28]">
                     <span>{isSelected ? "Currently Viewing" : "View Details"}</span>
                     <ArrowRight
                       className={`w-3.5 h-3.5 transition-transform ${
@@ -156,12 +156,12 @@ export function KeyAreasGrid() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.35, ease: [0.21, 0.47, 0.32, 0.98] }}
-              className="mt-8 rounded-2xl bg-white border-2 border-[#E8D0B8] p-6 sm:p-8 shadow-md"
+              className="mt-8 rounded-2xl bg-white border-2 border-[#F7DFC7] p-6 sm:p-8 shadow-md"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7 space-y-4">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#173330] bg-[#F7DFC7] px-3 py-1 rounded-full border border-[#E8D0B8]">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#111E28] bg-[#F7DFC7] px-3 py-1 rounded-full border border-[#F7DFC7]">
                       Area #0{selectedArea.id} Focus
                     </span>
                     <span className="text-xs text-stone-400">•</span>
@@ -170,7 +170,7 @@ export function KeyAreasGrid() {
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-2xl font-bold text-[#173330]">
+                  <h3 className="font-serif text-2xl font-bold text-[#111E28]">
                     {selectedArea.title}
                   </h3>
                   <p className="text-sm text-stone-700 leading-relaxed">
@@ -181,7 +181,7 @@ export function KeyAreasGrid() {
                     {selectedArea.features.map((feature, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center gap-2 text-xs font-semibold text-[#173330] bg-[#FAF5EE] p-3 rounded-xl border border-[#E8D0B8]"
+                        className="flex items-center gap-2 text-xs font-semibold text-[#111E28] bg-[#FAF8F5] p-3 rounded-xl border border-[#F7DFC7]"
                       >
                         <CheckCircle className="w-4 h-4 text-[#5B9891] flex-shrink-0" />
                         <span>{feature}</span>
@@ -191,8 +191,8 @@ export function KeyAreasGrid() {
                 </div>
 
                 {/* Right Side: Operational Rules Card */}
-                <div className="lg:col-span-5 bg-[#FAF5EE] p-5 rounded-2xl border-2 border-[#E8D0B8] space-y-3">
-                  <div className="flex items-center gap-2 text-xs font-bold text-[#173330] uppercase tracking-wide">
+                <div className="lg:col-span-5 bg-[#FAF8F5] p-5 rounded-2xl border-2 border-[#F7DFC7] space-y-3">
+                  <div className="flex items-center gap-2 text-xs font-bold text-[#111E28] uppercase tracking-wide">
                     <Info className="w-4 h-4 text-[#5B9891]" />
                     <span>Platform Operational Guidelines</span>
                   </div>
@@ -207,7 +207,7 @@ export function KeyAreasGrid() {
                   </ul>
 
                   {selectedArea.explainer.islamicOrSisterhoodNote && (
-                    <div className="pt-2 border-t border-[#E8D0B8] text-[11px] text-[#173330] font-medium italic">
+                    <div className="pt-2 border-t border-[#F7DFC7] text-[11px] text-[#111E28] font-medium italic">
                       🌸 {selectedArea.explainer.islamicOrSisterhoodNote}
                     </div>
                   )}
