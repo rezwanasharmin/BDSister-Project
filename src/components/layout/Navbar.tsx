@@ -286,13 +286,13 @@ export function Navbar() {
             </a>
 
             {/* Primary Action Button: "Join as Sister" in Bright Gold */}
-            <a
-              href="#auth-register"
+            <Link
+              href="/auth/register"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#D98408] hover:bg-[#B86E04] text-white text-xs font-bold shadow-sm transition-all whitespace-nowrap border border-[#F2B55D] focus:outline-none focus:ring-2 focus:ring-[#D98408]"
             >
               <Sparkles className="w-3.5 h-3.5 text-[#F7DFC7]" />
               <span>Join as Sister</span>
-            </a>
+            </Link>
           </div>
 
           {/* ========================================================= */}
@@ -418,13 +418,13 @@ export function Navbar() {
             >
               Sign In
             </a>
-            <a
-              href="#auth-register"
+            <Link
+              href="/auth/register"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-2.5 rounded-xl bg-[#D98408] text-white text-xs font-bold text-center shadow-md border border-[#F2B55D]"
             >
               Join as Sister (Referral Required)
-            </a>
+            </Link>
           </div>
         </div>
       )}
