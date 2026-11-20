@@ -90,19 +90,19 @@ export function Navbar() {
             aria-label="Main Navigation"
             className="hidden lg:flex items-center gap-0.5 bg-[#F7DFC7]/40 p-1.5 rounded-full border border-[#F7DFC7] shadow-2xs flex-shrink-0"
           >
-            <a
-              href="#hero"
+            <Link
+              href="/"
               className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#111E28] hover:bg-white hover:text-[#5B9891] hover:shadow-2xs transition-all whitespace-nowrap"
             >
               Home
-            </a>
+            </Link>
 
-            <a
-              href="#who-we-are"
+            <Link
+              href="/who-we-are"
               className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#111E28] hover:bg-white hover:text-[#5B9891] hover:shadow-2xs transition-all whitespace-nowrap"
             >
               Who We Are
-            </a>
+            </Link>
 
             <a
               href="#shop"
@@ -342,20 +342,20 @@ export function Navbar() {
           </div>
 
           <div className="space-y-1">
-            <a
-              href="#hero"
+            <Link
+              href="/"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2.5 rounded-xl text-sm font-semibold text-[#111E28] hover:bg-[#F7DFC7]/40 hover:text-[#5B9891]"
             >
               Home
-            </a>
-            <a
-              href="#who-we-are"
+            </Link>
+            <Link
+              href="/who-we-are"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2.5 rounded-xl text-sm font-semibold text-[#111E28] hover:bg-[#F7DFC7]/40 hover:text-[#5B9891]"
             >
               Who We Are
-            </a>
+            </Link>
             <a
               href="#shop"
               onClick={() => setMobileMenuOpen(false)}
