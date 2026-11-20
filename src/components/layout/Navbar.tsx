@@ -189,8 +189,8 @@ export function Navbar() {
                       </div>
                     </Link>
 
-                    <a
-                      href="#unified-wings"
+                    <Link
+                      href="/wings"
                       onClick={() => setMoreDropdownOpen(false)}
                       className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-medium text-stone-800 hover:bg-[#F7DFC7]/40 hover:text-[#5B9891] transition-colors"
                     >
@@ -203,7 +203,7 @@ export function Navbar() {
                           CoP, TSPP, MIDJ & The Hut
                         </span>
                       </div>
-                    </a>
+                    </Link>
 
                     <div className="border-t border-[#F7DFC7] my-1"></div>
 
@@ -394,13 +394,13 @@ export function Navbar() {
             >
               Resource Library
             </Link>
-            <a
-              href="#unified-wings"
+            <Link
+              href="/wings"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2.5 rounded-xl text-sm font-semibold text-[#111E28] hover:bg-[#F7DFC7]/40 hover:text-[#5B9891]"
             >
               Sister Wings (CoP, TSPP, MIDJ, The Hut)
-            </a>
+            </Link>
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
