@@ -173,8 +173,8 @@ export function Navbar() {
                       </div>
                     </Link>
 
-                    <a
-                      href="#resources"
+                    <Link
+                      href="/resources"
                       onClick={() => setMoreDropdownOpen(false)}
                       className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-medium text-stone-800 hover:bg-[#F7DFC7]/40 hover:text-[#5B9891] transition-colors"
                     >
@@ -187,7 +187,7 @@ export function Navbar() {
                           Guides, kits & downloads
                         </span>
                       </div>
-                    </a>
+                    </Link>
 
                     <a
                       href="#unified-wings"
@@ -387,13 +387,13 @@ export function Navbar() {
             >
               Events & Workshops
             </Link>
-            <a
-              href="#resources"
+            <Link
+              href="/resources"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2.5 rounded-xl text-sm font-semibold text-[#111E28] hover:bg-[#F7DFC7]/40 hover:text-[#5B9891]"
             >
               Resource Library
-            </a>
+            </Link>
             <a
               href="#unified-wings"
               onClick={() => setMobileMenuOpen(false)}
