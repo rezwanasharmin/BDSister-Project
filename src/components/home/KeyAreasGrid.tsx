@@ -133,13 +133,28 @@ export function KeyAreasGrid() {
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-[#F7DFC7]/60 flex items-center justify-between text-[11px] font-bold text-[#111E28]">
-                    <span>{isSelected ? "Currently Viewing" : "View Details"}</span>
-                    <ArrowRight
-                      className={`w-3.5 h-3.5 transition-transform ${
-                        isSelected ? "translate-x-1 text-[#5B9891]" : "text-stone-400"
+                  {/* Capsule Action Button inspired by client reference */}
+                  <div className="mt-4 pt-3 border-t border-[#F7DFC7]">
+                    <div
+                      className={`inline-flex items-center justify-between w-full pl-4 pr-1.5 py-1.5 rounded-full transition-all duration-200 shadow-2xs ${
+                        isSelected
+                          ? "bg-[#D98408] text-white border-2 border-[#D98408] shadow-sm"
+                          : "bg-white border-2 border-[#D98408] text-[#D98408] group-hover:bg-[#D98408] group-hover:text-white"
                       }`}
-                    />
+                    >
+                      <span className="text-xs font-bold tracking-wide">
+                        {isSelected ? "Currently Viewing" : "Explore"}
+                      </span>
+                      <span
+                        className={`w-6 h-6 rounded-full flex items-center justify-center transition-all ${
+                          isSelected
+                            ? "bg-white text-[#D98408]"
+                            : "bg-[#D98408] text-white group-hover:bg-white group-hover:text-[#D98408]"
+                        }`}
+                      >
+                        <ArrowRight className="w-3 h-3" />
+                      </span>
+                    </div>
                   </div>
                 </motion.div>
               </StaggerItem>

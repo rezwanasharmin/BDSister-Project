@@ -134,9 +134,16 @@ export function UnifiedWingsSection() {
                     </p>
                   </div>
 
-                  <div className="mt-5 pt-3 border-t border-[#F7DFC7]/60 flex items-center justify-between text-xs font-semibold text-stone-600 group-hover:text-[#5B9891]">
-                    <span>Connected via Unified Database</span>
-                    <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-[#5B9891]" />
+                  {/* Capsule Action Button inspired by client reference */}
+                  <div className="mt-5 pt-3 border-t border-[#F7DFC7]">
+                    <div className="inline-flex items-center justify-between w-full pl-4 pr-1.5 py-1.5 rounded-full bg-white border-2 border-[#D98408] text-[#D98408] group-hover:bg-[#D98408] group-hover:text-white transition-all duration-200 shadow-2xs">
+                      <span className="text-xs font-bold tracking-wide">
+                        Explore Wing
+                      </span>
+                      <span className="w-7 h-7 rounded-full bg-[#D98408] group-hover:bg-white text-white group-hover:text-[#D98408] flex items-center justify-center shadow-xs transition-all transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </span>
+                    </div>
                   </div>
                 </motion.div>
               </StaggerItem>
@@ -162,13 +169,19 @@ export function UnifiedWingsSection() {
                   Vendor registrations on The Hut Network, publications on TSPP, and contributor bylines on MIDJ seamlessly syndicate into your public BDSisters profile.
                 </p>
               </div>
-              <a
-                href="#who-we-are"
-                className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#111E28] hover:text-[#5B9891] transition-colors"
-              >
-                <span>Learn about Muhsina Governance</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#5B9891]" />
-              </a>
+              <div className="mt-5 pt-3 border-t border-[#D98408]/30">
+                <a
+                  href="#who-we-are"
+                  className="inline-flex items-center justify-between w-full pl-4 pr-1.5 py-1.5 rounded-full bg-[#D98408] hover:bg-[#B86E04] text-white transition-all shadow-md group/hub"
+                >
+                  <span className="text-xs font-bold tracking-wide">
+                    Explore Governance
+                  </span>
+                  <span className="w-7 h-7 rounded-full bg-white/25 text-white flex items-center justify-center shadow-xs transition-transform transform group-hover/hub:translate-x-0.5 group-hover/hub:-translate-y-0.5">
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </span>
+                </a>
+              </div>
             </motion.div>
           </StaggerItem>
         </StaggerContainer>
