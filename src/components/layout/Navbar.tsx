@@ -157,8 +157,8 @@ export function Navbar() {
               {moreDropdownOpen && (
                 <div className="absolute left-0 sm:right-0 sm:left-auto top-full pt-1.5 w-60 z-50">
                   <div className="rounded-2xl bg-white border border-[#F7DFC7] shadow-xl p-2 space-y-1 animate-in fade-in zoom-in-95">
-                    <a
-                      href="#events"
+                    <Link
+                      href="/events"
                       onClick={() => setMoreDropdownOpen(false)}
                       className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-medium text-stone-800 hover:bg-[#F7DFC7]/40 hover:text-[#5B9891] transition-colors"
                     >
@@ -171,7 +171,7 @@ export function Navbar() {
                           Live sessions & calendar
                         </span>
                       </div>
-                    </a>
+                    </Link>
 
                     <a
                       href="#resources"
@@ -380,13 +380,13 @@ export function Navbar() {
             >
               Sister Profiles
             </Link>
-            <a
-              href="#events"
+            <Link
+              href="/events"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2.5 rounded-xl text-sm font-semibold text-[#111E28] hover:bg-[#F7DFC7]/40 hover:text-[#5B9891]"
             >
               Events & Workshops
-            </a>
+            </Link>
             <a
               href="#resources"
               onClick={() => setMobileMenuOpen(false)}
