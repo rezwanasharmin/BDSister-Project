@@ -102,7 +102,7 @@ export const SISTER_WINGS: WingItem[] = [
     tagline: "Parenting & Homeschooling Discussions",
     roleInBDSisters: "Synergizes parenting circles, curriculum guidance, and child-rearing forums.",
     iconName: "Baby",
-    badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    badgeColor: "bg-[#5B9891]/15 text-[#173330] border-[#5B9891]/30",
     linkUrl: "#cop-wing",
   },
   {
@@ -112,7 +112,7 @@ export const SISTER_WINGS: WingItem[] = [
     tagline: "Publications & Downloadable Resources",
     roleInBDSisters: "Distributes authentic Islamic literature, research papers, and ebooks.",
     iconName: "BookOpen",
-    badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
+    badgeColor: "bg-[#F2B55D]/25 text-[#D98408] border-[#F2B55D]/40",
     linkUrl: "#tspp-wing",
   },
   {
@@ -122,7 +122,7 @@ export const SISTER_WINGS: WingItem[] = [
     tagline: "Featured Contributors & Thought Leadership",
     roleInBDSisters: "Showcases opinion pieces, creative writing, and academic articles by sisters.",
     iconName: "PenTool",
-    badgeColor: "bg-rose-100 text-rose-800 border-rose-200",
+    badgeColor: "bg-[#F7DFC7] text-[#173330] border-[#E8D0B8]",
     linkUrl: "#midj-wing",
   },
   {
@@ -132,7 +132,7 @@ export const SISTER_WINGS: WingItem[] = [
     tagline: "Vendor Registrations & Halal Artisan Guild",
     roleInBDSisters: "Empowers home-based makers, artisans, and women-led suppliers.",
     iconName: "Store",
-    badgeColor: "bg-teal-100 text-teal-800 border-teal-200",
+    badgeColor: "bg-[#5B9891]/20 text-[#173330] border-[#5B9891]/40",
     linkUrl: "#hut-network",
   },
   {
@@ -142,7 +142,7 @@ export const SISTER_WINGS: WingItem[] = [
     tagline: "Sisterhood Skills & Development",
     roleInBDSisters: "Connects aspiring sisters with established role models for career guidance.",
     iconName: "Compass",
-    badgeColor: "bg-indigo-100 text-indigo-800 border-indigo-200",
+    badgeColor: "bg-[#D98408]/15 text-[#173330] border-[#D98408]/30",
     linkUrl: "#imbd-wing",
   },
 ];

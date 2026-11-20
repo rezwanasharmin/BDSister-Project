@@ -30,24 +30,24 @@ export function UnifiedWingsSection() {
     <section
       id="unified-wings"
       aria-labelledby="wings-heading"
-      className="py-16 bg-[#FAF7EF] border-b border-[#DFCFA5] overflow-hidden"
+      className="py-16 bg-[#FAF5EE] border-b border-[#E8D0B8] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal direction="up">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-[#DFCFA5]/60">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-[#E8D0B8]/60">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <span className="p-1.5 rounded-lg bg-[#EFE3C2] text-[#123524] border border-[#DFCFA5]">
-                  <Network className="w-4 h-4 text-[#3E7B27]" />
+                <span className="p-1.5 rounded-lg bg-[#F7DFC7] text-[#173330] border border-[#E8D0B8]">
+                  <Network className="w-4 h-4 text-[#5B9891]" />
                 </span>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#123524]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#173330]">
                   Muhsina Organization Ecosystem
                 </span>
               </div>
               <h2
                 id="wings-heading"
-                className="font-serif text-2xl sm:text-3xl font-bold text-[#123524] tracking-tight"
+                className="font-serif text-2xl sm:text-3xl font-bold text-[#173330] tracking-tight"
               >
                 Importance of a Unified Database
               </h2>
@@ -71,28 +71,28 @@ export function UnifiedWingsSection() {
           <motion.div
             whileHover={{ scale: 1.008 }}
             transition={{ duration: 0.3 }}
-            className="mb-10 rounded-2xl bg-[#123524] text-[#EFE3C2] p-6 sm:p-8 shadow-xl relative overflow-hidden border-2 border-[#85A947]/40"
+            className="mb-10 rounded-2xl bg-[#173330] text-[#F7DFC7] p-6 sm:p-8 shadow-xl relative overflow-hidden border-2 border-[#D98408]/40"
           >
-            <div className="absolute right-0 top-0 translate-x-10 -translate-y-10 w-72 h-72 bg-[#3E7B27]/25 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute right-0 top-0 translate-x-10 -translate-y-10 w-72 h-72 bg-[#5B9891]/25 rounded-full blur-3xl pointer-events-none" />
             <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
               <div className="md:col-span-2 space-y-3">
-                <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#EFE3C2] text-[#123524] border border-[#DFCFA5] inline-block">
+                <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#F7DFC7] text-[#173330] border border-[#E8D0B8] inline-block">
                   Master Profile Creation Platform
                 </span>
                 <h3 className="text-xl sm:text-2xl font-bold font-serif leading-snug text-white">
                   One Verified Profile. Unlimited Sisterhood Synergy.
                 </h3>
-                <p className="text-xs sm:text-sm text-[#EFE3C2]/90 leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#F7DFC7]/90 leading-relaxed">
                   Add the roles you play across all wings—from writing articles on MIDJ to leading homeschooling
                   dialogues on CoP or supplying goods through The Hut Network. All validated under a single referee-backed identity.
                 </p>
               </div>
-              <div className="bg-[#FAF7EF]/10 backdrop-blur-sm p-4 rounded-xl border border-[#DFCFA5]/30 space-y-2">
-                <div className="flex items-center gap-2 text-xs font-bold text-[#EFE3C2]">
-                  <ShieldCheck className="w-4 h-4 text-[#85A947]" />
+              <div className="bg-[#FAF5EE]/10 backdrop-blur-sm p-4 rounded-xl border border-[#E8D0B8]/30 space-y-2">
+                <div className="flex items-center gap-2 text-xs font-bold text-[#F7DFC7]">
+                  <ShieldCheck className="w-4 h-4 text-[#D98408]" />
                   <span>Referee Rule: Strict Security</span>
                 </div>
-                <p className="text-xs text-[#EFE3C2]/80 leading-relaxed">
+                <p className="text-xs text-[#F7DFC7]/80 leading-relaxed">
                   All profilers must have referees who know them in person before registration is approved by the admin.
                 </p>
               </div>
@@ -111,22 +111,22 @@ export function UnifiedWingsSection() {
               <StaggerItem key={wing.id}>
                 <motion.div
                   whileHover={{ y: -6, transition: { duration: 0.25 } }}
-                  className="group h-full relative rounded-2xl border border-[#DFCFA5] bg-white hover:bg-[#FAF7EF] p-6 transition-all duration-200 hover:shadow-xl hover:border-[#3E7B27] flex flex-col justify-between"
+                  className="group h-full relative rounded-2xl border border-[#E8D0B8] bg-white hover:bg-[#FAF5EE] p-6 transition-all duration-200 hover:shadow-xl hover:border-[#5B9891] flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-3">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#EFE3C2] text-[#123524] border border-[#DFCFA5]">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#F7DFC7] text-[#173330] border border-[#E8D0B8]">
                         {wing.code}
                       </span>
-                      <span className="p-2 rounded-xl bg-[#FAF7EF] border border-[#DFCFA5] text-[#123524] group-hover:text-[#3E7B27] group-hover:bg-[#EFE3C2] transition-colors shadow-2xs">
+                      <span className="p-2 rounded-xl bg-[#FAF5EE] border border-[#E8D0B8] text-[#173330] group-hover:text-[#5B9891] group-hover:bg-[#F7DFC7] transition-colors shadow-2xs">
                         {icon}
                       </span>
                     </div>
 
-                    <h3 className="text-base font-bold text-[#123524] group-hover:text-[#3E7B27] transition-colors">
+                    <h3 className="text-base font-bold text-[#173330] group-hover:text-[#5B9891] transition-colors">
                       {wing.name}
                     </h3>
-                    <p className="text-xs font-semibold text-[#3E7B27] mt-0.5">
+                    <p className="text-xs font-semibold text-[#5B9891] mt-0.5">
                       {wing.tagline}
                     </p>
                     <p className="text-xs text-stone-700 mt-2.5 leading-relaxed">
@@ -134,9 +134,9 @@ export function UnifiedWingsSection() {
                     </p>
                   </div>
 
-                  <div className="mt-5 pt-3 border-t border-[#DFCFA5]/60 flex items-center justify-between text-xs font-semibold text-stone-600 group-hover:text-[#3E7B27]">
+                  <div className="mt-5 pt-3 border-t border-[#E8D0B8]/60 flex items-center justify-between text-xs font-semibold text-stone-600 group-hover:text-[#5B9891]">
                     <span>Connected via Unified Database</span>
-                    <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-[#3E7B27]" />
+                    <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-[#5B9891]" />
                   </div>
                 </motion.div>
               </StaggerItem>
@@ -147,15 +147,15 @@ export function UnifiedWingsSection() {
           <StaggerItem>
             <motion.div
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="h-full rounded-2xl border-2 border-dashed border-[#85A947] bg-[#EFE3C2]/40 p-6 flex flex-col justify-between"
+              className="h-full rounded-2xl border-2 border-dashed border-[#D98408] bg-[#F7DFC7]/40 p-6 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#123524] text-[#EFE3C2]">
+                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#173330] text-[#F7DFC7]">
                     Cross-Wing Hub
                   </span>
                 </div>
-                <h3 className="text-base font-bold text-[#123524]">
+                <h3 className="text-base font-bold text-[#173330]">
                   Shared Workshops, Archives & Dialogues
                 </h3>
                 <p className="text-xs text-stone-700 mt-2 leading-relaxed">
@@ -164,10 +164,10 @@ export function UnifiedWingsSection() {
               </div>
               <a
                 href="#who-we-are"
-                className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#123524] hover:text-[#3E7B27] transition-colors"
+                className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#173330] hover:text-[#5B9891] transition-colors"
               >
                 <span>Learn about Muhsina Governance</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#3E7B27]" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#5B9891]" />
               </a>
             </motion.div>
           </StaggerItem>

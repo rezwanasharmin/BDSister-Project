@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --color-brand-dark: #123524;
-  --color-brand-primary: #3E7B27;
-  --color-brand-accent: #85A947;
-  --color-brand-sand: #EFE3C2;
+  --color-brand-dark: #173330;       /* Deep Loch Pine / Base Text */
+  --color-brand-primary: #5B9891;    /* Loch Blue (Client Choice) */
+  --color-brand-gold: #D98408;       /* Bright Gold (Client Choice) */
+  --color-brand-golden-hour: #F2B55D;/* Golden Hour (Client Choice) */
+  --color-brand-paper: #F7DFC7;      /* Paper Heart (Client Choice) */
+  --color-brand-paper-light: #FAF5EE;/* Soft Canvas Tint */
+  --color-brand-paper-border: #E8D0B8;/* Elegant Divider Border */
 }
 
 html {
@@ -15,21 +18,21 @@ html {
 }
 
 body {
-  color: #123524;
-  background-color: #FAF7EF; /* Warm sand light background */
+  color: #173330;
+  background-color: #FAF5EE; /* Paper Heart soft canvas */
   font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background-color: #EFE3C2;
-  color: #123524;
+  background-color: #F7DFC7;
+  color: #173330;
 }
 
 /* Custom focus ring for keyboard accessibility */
 :focus-visible {
-  outline: 2px solid #3E7B27;
+  outline: 2px solid #D98408;
   outline-offset: 2px;
 }
 
@@ -39,62 +42,77 @@ body {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF7EF;
+  background: #FAF5EE;
 }
 ::-webkit-scrollbar-thumb {
-  background: #DFCFA5;
+  background: #E8D0B8;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #85A947;
+  background: #5B9891;
 }
 
 /* ======================================================== */
-/* COLOR HUNT PALETTE #123524, #3E7B27, #85A947, #EFE3C2    */
-/* Direct utility layer to guarantee instant style rendering*/
+/* CLIENT SIGNATURE PALETTE UTILITY LAYER                    */
+/* Paper Heart (#F7DFC7), Golden Hour (#F2B55D),             */
+/* Bright Gold (#D98408), Loch Blue (#5B9891)                */
 /* ======================================================== */
-.bg-brand-dark { background-color: #123524 !important; }
-.text-brand-dark { color: #123524 !important; }
-.border-brand-dark { border-color: #123524 !important; }
+.bg-brand-dark { background-color: #173330 !important; }
+.text-brand-dark { color: #173330 !important; }
+.border-brand-dark { border-color: #173330 !important; }
 
-.bg-brand-primary { background-color: #3E7B27 !important; }
-.text-brand-primary { color: #3E7B27 !important; }
-.border-brand-primary { border-color: #3E7B27 !important; }
+.bg-brand-primary { background-color: #5B9891 !important; }
+.text-brand-primary { color: #5B9891 !important; }
+.border-brand-primary { border-color: #5B9891 !important; }
 
-.bg-brand-accent { background-color: #85A947 !important; }
-.text-brand-accent { color: #85A947 !important; }
-.border-brand-accent { border-color: #85A947 !important; }
+.bg-brand-gold { background-color: #D98408 !important; }
+.text-brand-gold { color: #D98408 !important; }
+.border-brand-gold { border-color: #D98408 !important; }
 
-.bg-brand-sand { background-color: #EFE3C2 !important; }
-.text-brand-sand { color: #EFE3C2 !important; }
-.border-brand-sand { border-color: #EFE3C2 !important; }
+.bg-brand-golden { background-color: #F2B55D !important; }
+.text-brand-golden { color: #F2B55D !important; }
+.border-brand-golden { border-color: #F2B55D !important; }
 
-.bg-brand-sandLight { background-color: #FAF7EF !important; }
-.border-brand-sandDark { border-color: #DFCFA5 !important; }
+.bg-brand-paper { background-color: #F7DFC7 !important; }
+.text-brand-paper { color: #F7DFC7 !important; }
+.border-brand-paper { border-color: #F7DFC7 !important; }
 
-.hover\:bg-brand-primary:hover { background-color: #3E7B27 !important; }
-.hover\:bg-brand-dark:hover { background-color: #123524 !important; }
-.hover\:text-brand-primary:hover { color: #3E7B27 !important; }
-.hover\:text-brand-dark:hover { color: #123524 !important; }
+.bg-brand-paperLight { background-color: #FAF5EE !important; }
+.border-brand-paperBorder { border-color: #E8D0B8 !important; }
+
+.hover\:bg-brand-primary:hover { background-color: #5B9891 !important; }
+.hover\:bg-brand-dark:hover { background-color: #173330 !important; }
+.hover\:text-brand-primary:hover { color: #5B9891 !important; }
+.hover\:text-brand-dark:hover { color: #173330 !important; }
 
 /* Palette Button Styles */
 .btn-brand-primary {
-  background-color: #123524 !important;
-  color: #EFE3C2 !important;
-  border: 1px solid rgba(133, 169, 71, 0.4) !important;
+  background-color: #173330 !important;
+  color: #F7DFC7 !important;
+  border: 1px solid rgba(217, 132, 8, 0.45) !important;
   transition: all 0.2s ease-in-out !important;
 }
 .btn-brand-primary:hover {
-  background-color: #3E7B27 !important;
+  background-color: #5B9891 !important;
   color: #FFFFFF !important;
 }
 
-.btn-brand-sand {
-  background-color: #EFE3C2 !important;
-  color: #123524 !important;
-  border: 1px solid #DFCFA5 !important;
+.btn-brand-gold {
+  background-color: #D98408 !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(242, 181, 93, 0.5) !important;
   transition: all 0.2s ease-in-out !important;
 }
-.btn-brand-sand:hover {
-  background-color: #DFCFA5 !important;
+.btn-brand-gold:hover {
+  background-color: #B86E04 !important;
+}
+
+.btn-brand-paper {
+  background-color: #F7DFC7 !important;
+  color: #173330 !important;
+  border: 1px solid #E8D0B8 !important;
+  transition: all 0.2s ease-in-out !important;
+}
+.btn-brand-paper:hover {
+  background-color: #E8D0B8 !important;
 }
