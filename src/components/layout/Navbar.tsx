@@ -104,15 +104,15 @@ export function Navbar() {
               Who We Are
             </Link>
 
-            <a
-              href="#shop"
+            <Link
+              href="/shop"
               className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#111E28] hover:bg-white hover:text-[#5B9891] hover:shadow-2xs transition-all whitespace-nowrap flex items-center gap-1.5"
             >
               <span>Shop</span>
               <span className="px-1.5 py-0.2 text-[8px] font-bold rounded-full bg-[#D98408] text-white uppercase shadow-2xs">
                 Halal
               </span>
-            </a>
+            </Link>
 
             <a
               href="#forums"
@@ -356,8 +356,8 @@ export function Navbar() {
             >
               Who We Are
             </Link>
-            <a
-              href="#shop"
+            <Link
+              href="/shop"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-[#111E28] hover:bg-[#F7DFC7]/40 hover:text-[#5B9891]"
             >
@@ -365,7 +365,7 @@ export function Navbar() {
               <span className="px-2 py-0.5 text-[9px] font-bold rounded-full bg-[#D98408] text-white">
                 HALAL
               </span>
-            </a>
+            </Link>
             <a
               href="#forums"
               onClick={() => setMobileMenuOpen(false)}
