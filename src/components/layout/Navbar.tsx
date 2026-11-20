@@ -121,12 +121,12 @@ export function Navbar() {
               Forums
             </Link>
 
-            <a
-              href="#profiles"
+            <Link
+              href="/profiles"
               className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#111E28] hover:bg-white hover:text-[#5B9891] hover:shadow-2xs transition-all whitespace-nowrap"
             >
               Sister Profiles
-            </a>
+            </Link>
 
             {/* 'More' HOVER-ACTIVATED Dropdown Menu */}
             <div
@@ -373,13 +373,13 @@ export function Navbar() {
             >
               Discussion Forums
             </Link>
-            <a
-              href="#profiles"
+            <Link
+              href="/profiles"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2.5 rounded-xl text-sm font-semibold text-[#111E28] hover:bg-[#F7DFC7]/40 hover:text-[#5B9891]"
             >
               Sister Profiles
-            </a>
+            </Link>
             <a
               href="#events"
               onClick={() => setMobileMenuOpen(false)}
