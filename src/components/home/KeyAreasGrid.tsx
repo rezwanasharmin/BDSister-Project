@@ -133,26 +133,34 @@ export function KeyAreasGrid() {
                     </p>
                   </div>
 
-                  {/* Capsule Action Button inspired by client reference */}
-                  <div className="mt-4 pt-3 border-t border-[#F7DFC7]">
+                  {/* Bottom Row: Original Text on Left + Compact Capsule Button on Right */}
+                  <div className="mt-4 pt-3 border-t border-[#F7DFC7] flex items-center justify-between gap-2">
+                    <span className="text-xs font-semibold text-stone-600">
+                      {isSelected ? "Currently Viewing" : "View Details"}
+                    </span>
                     <div
-                      className={`inline-flex items-center justify-between w-full pl-4 pr-1.5 py-1.5 rounded-full transition-all duration-200 shadow-2xs ${
+                      className={`flex-shrink-0 inline-flex items-center gap-2 pl-3.5 pr-1.5 py-1.5 rounded-full transition-all duration-300 shadow-xs ${
                         isSelected
-                          ? "bg-[#D98408] text-white border-2 border-[#D98408] shadow-sm"
+                          ? "bg-[#D98408] text-white shadow-md ring-2 ring-[#D98408]/30"
                           : "bg-white border-2 border-[#D98408] text-[#D98408] group-hover:bg-[#D98408] group-hover:text-white"
                       }`}
                     >
                       <span className="text-xs font-bold tracking-wide">
-                        {isSelected ? "Currently Viewing" : "Explore"}
+                        {isSelected ? "Active" : "Explore"}
                       </span>
                       <span
-                        className={`w-6 h-6 rounded-full flex items-center justify-center transition-all ${
+                        className={`w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
                           isSelected
                             ? "bg-white text-[#D98408]"
                             : "bg-[#D98408] text-white group-hover:bg-white group-hover:text-[#D98408]"
                         }`}
                       >
-                        <ArrowRight className="w-3 h-3" />
+                        <ArrowRight
+                          className="w-3.5 h-3.5 transition-transform duration-300 ease-out"
+                          style={{
+                            transform: isSelected ? "rotate(0deg)" : "rotate(-45deg)",
+                          }}
+                        />
                       </span>
                     </div>
                   </div>
