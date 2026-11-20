@@ -266,24 +266,24 @@ export function Navbar() {
             )}
 
             {/* Shop Cart Icon */}
-            <a
-              href="#shop"
+            <Link
+              href="/shop"
               className="relative p-2 rounded-full text-[#111E28] hover:bg-[#F7DFC7]/50 hover:text-[#5B9891] transition-colors"
               aria-label="E-commerce Shop"
               title="Shop Cart"
             >
               <ShoppingBag className="w-4 h-4" />
               <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-[#D98408] ring-2 ring-white"></span>
-            </a>
+            </Link>
 
             {/* Sign In Button with Loch Blue Border */}
-            <a
-              href="#auth-signin"
+            <Link
+              href="/auth/signin"
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-[#5B9891] bg-white hover:bg-[#F7DFC7]/40 text-[#5B9891] text-xs font-bold transition-all shadow-2xs whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
             >
               <LogIn className="w-3.5 h-3.5 text-[#5B9891]" />
               <span>Sign In</span>
-            </a>
+            </Link>
 
             {/* Primary Action Button: "Join as Sister" in Bright Gold */}
             <Link
@@ -299,13 +299,13 @@ export function Navbar() {
           {/* 4. MOBILE / TABLET MENU TRIGGER (< lg)                    */}
           {/* ========================================================= */}
           <div className="flex items-center gap-1 lg:hidden">
-            <a
-              href="#shop"
+            <Link
+              href="/shop"
               className="p-2 text-[#111E28] hover:bg-[#F7DFC7]/50 rounded-full"
               aria-label="Shop"
             >
               <ShoppingBag className="w-5 h-5" />
-            </a>
+            </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -411,13 +411,13 @@ export function Navbar() {
           </div>
 
           <div className="pt-4 border-t border-[#F7DFC7] mt-4 flex flex-col gap-2">
-            <a
-              href="#auth-signin"
+            <Link
+              href="/auth/signin"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-2.5 rounded-xl border border-[#5B9891] text-[#5B9891] text-xs font-bold text-center hover:bg-[#F7DFC7]/40"
             >
               Sign In
-            </a>
+            </Link>
             <Link
               href="/auth/register"
               onClick={() => setMobileMenuOpen(false)}
