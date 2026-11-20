@@ -233,10 +233,10 @@ export function ForumTeaser() {
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             href="#auth-register"
-                            className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-full bg-[#111E28] hover:bg-[#5B9891] text-[#F7DFC7] hover:text-white text-xs font-bold shadow-md transition-all border border-[#D98408]/50"
+                            className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-full bg-[#5B9891] hover:bg-[#477C76] text-white text-xs font-bold shadow-md transition-all border border-[#5B9891]"
                           >
                             <span>Be a member to read the post. It&apos;s Free</span>
-                            <ArrowRight className="w-3.5 h-3.5 text-[#D98408]" />
+                            <ArrowRight className="w-3.5 h-3.5 text-[#F7DFC7]" />
                           </motion.a>
                         </div>
                       </motion.div>

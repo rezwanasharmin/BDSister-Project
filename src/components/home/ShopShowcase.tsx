@@ -187,7 +187,7 @@ export function ShopShowcase() {
                             <Layers className="w-3 h-3 text-[#D98408]" /> Wholesale Ready
                           </span>
                         ) : (
-                          <span className="px-2 py-0.5 rounded-full text-[9px] font-medium bg-black/60 text-white backdrop-blur-xs">
+                          <span className="px-2 py-0.5 rounded-full text-[9px] font-medium bg-[#5B9891]/90 text-white backdrop-blur-xs border border-white/20">
                             Retail Only
                           </span>
                         )}

@@ -246,7 +246,7 @@ export function NewsletterSection() {
                     className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#F7DFC7] text-[#111E28] hover:border-[#5B9891] transition-colors"
                   >
                     <div className="flex items-center gap-2.5">
-                      <span className="w-8 h-8 rounded-full bg-[#111E28] text-[#F7DFC7] flex items-center justify-center font-bold text-xs border border-[#D98408]">
+                      <span className="w-8 h-8 rounded-full bg-[#5B9891] text-white flex items-center justify-center font-bold text-xs border border-[#F2B55D]">
                         WA
                       </span>
                       <div>
@@ -267,7 +267,7 @@ export function NewsletterSection() {
                     className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#F7DFC7] text-[#111E28] hover:border-[#5B9891] transition-colors"
                   >
                     <div className="flex items-center gap-2.5">
-                      <span className="w-8 h-8 rounded-full bg-[#5B9891] text-white flex items-center justify-center font-bold text-xs border border-[#D98408]">
+                      <span className="w-8 h-8 rounded-full bg-[#5B9891] text-white flex items-center justify-center font-bold text-xs border border-[#F2B55D]">
                         TG
                       </span>
                       <div>
@@ -285,17 +285,17 @@ export function NewsletterSection() {
               </div>
             </ScrollReveal>
 
-            {/* Newsletter Sign-up Box in Deep Islamic Green */}
+            {/* Newsletter Sign-up Box in Loch Blue with Bright Gold CTA */}
             <ScrollReveal direction="left" delay={0.3} className="flex-1">
-              <div className="h-full p-6 sm:p-7 rounded-2xl bg-[#111E28] text-[#F7DFC7] shadow-xl border-2 border-[#D98408]/50 flex flex-col justify-between">
+              <div className="h-full p-6 sm:p-7 rounded-2xl bg-[#5B9891] text-white shadow-xl border-2 border-[#477C76] flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#D98408] bg-[#F7DFC7]/15 px-2.5 py-0.5 rounded-full border border-[#D98408]/40 inline-block mb-2">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#111E28] bg-[#F2B55D] px-2.5 py-0.5 rounded-full border border-[#D98408] inline-block mb-2">
                     Weekly Digest
                   </span>
                   <h3 className="font-serif text-lg font-bold text-white mb-1.5">
                     Subscribe to The Muhsina Sisterhood Newsletter
                   </h3>
-                  <p className="text-xs text-[#F7DFC7]/90 leading-relaxed mb-4">
+                  <p className="text-xs text-[#F7DFC7] leading-relaxed mb-4">
                     Receive weekly curated essays from MIDJ, recommended books from TSPP, parenting guides from CoP,
                     and exclusive member discounts from BDSisters shop.
                   </p>
@@ -306,9 +306,9 @@ export function NewsletterSection() {
                     <motion.div
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      className="p-3.5 rounded-xl bg-[#5B9891] border border-[#D98408] text-xs text-white flex items-center gap-2"
+                      className="p-3.5 rounded-xl bg-white text-[#5B9891] border border-[#F2B55D] text-xs flex items-center gap-2"
                     >
-                      <CheckCircle2 className="w-4 h-4 text-[#F7DFC7] flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[#D98408] flex-shrink-0" />
                       <span className="font-bold">Jazakillahu Khairan! You are subscribed.</span>
                     </motion.div>
                   ) : (
@@ -320,18 +320,18 @@ export function NewsletterSection() {
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="Enter your email"
-                          className="flex-grow text-xs px-4 py-2.5 rounded-full bg-black/30 border border-[#D98408]/50 text-white placeholder-[#F7DFC7]/50 focus:outline-none focus:ring-2 focus:ring-[#D98408]"
+                          className="flex-grow text-xs px-4 py-2.5 rounded-full bg-white text-[#111E28] placeholder-stone-400 border border-[#F7DFC7] focus:outline-none focus:ring-2 focus:ring-[#D98408]"
                         />
                         <motion.button
                           whileHover={{ scale: 1.03 }}
                           whileTap={{ scale: 0.97 }}
                           type="submit"
-                          className="px-5 py-2.5 rounded-full bg-[#5B9891] hover:bg-[#D98408] text-white hover:text-[#111E28] text-xs font-bold transition-colors shadow-2xs whitespace-nowrap"
+                          className="px-5 py-2.5 rounded-full bg-[#D98408] hover:bg-[#B86E04] text-white text-xs font-bold transition-colors shadow-md border border-[#F2B55D] whitespace-nowrap"
                         >
                           Subscribe
                         </motion.button>
                       </div>
-                      <span className="text-[10px] text-[#F7DFC7]/70 block">
+                      <span className="text-[10px] text-white/80 block">
                         No spam ever. Unsubscribe anytime with one click.
                       </span>
                     </form>

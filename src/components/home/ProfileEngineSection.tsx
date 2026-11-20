@@ -99,9 +99,9 @@ export function ProfileEngineSection() {
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
                     type="button"
-                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#111E28] text-[#F7DFC7] hover:bg-[#5B9891] hover:text-white text-xs font-bold transition-colors shadow-2xs border border-[#D98408]/40"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#5B9891] text-white hover:bg-[#477C76] text-xs font-bold transition-colors shadow-2xs border border-[#F2B55D]"
                   >
-                    <Download className="w-3.5 h-3.5 text-[#D98408]" />
+                    <Download className="w-3.5 h-3.5 text-[#F7DFC7]" />
                     <span>Download Profile (PDF)</span>
                   </motion.button>
                 </div>
@@ -111,7 +111,7 @@ export function ProfileEngineSection() {
                   {/* Big Square Profile Picture */}
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl bg-[#111E28] text-[#F7DFC7] font-serif text-3xl font-bold flex flex-col items-center justify-center flex-shrink-0 shadow-md border-2 border-[#D98408] relative cursor-pointer"
+                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl bg-[#5B9891] text-[#F7DFC7] font-serif text-3xl font-bold flex flex-col items-center justify-center flex-shrink-0 shadow-md border-2 border-[#D98408] relative cursor-pointer"
                   >
                     <span>R.A.</span>
                     <span className="text-[10px] uppercase font-sans tracking-widest text-[#F7DFC7]/80 mt-1">
@@ -310,7 +310,7 @@ export function ProfileEngineSection() {
                                 initial={{ width: 0 }}
                                 animate={{ width: "85%" }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="h-full bg-[#111E28] rounded-full"
+                                className="h-full bg-[#5B9891] rounded-full"
                               />
                             </div>
                           </div>
@@ -358,31 +358,31 @@ export function ProfileEngineSection() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.25 }}
-                        className="p-5 rounded-2xl bg-[#111E28] text-[#F7DFC7] space-y-3 border-2 border-[#D98408]/40 shadow-inner"
+                        className="p-5 rounded-2xl bg-[#5B9891] text-white space-y-3 border-2 border-[#477C76] shadow-xl"
                       >
                         <div className="flex items-center justify-between">
-                          <span className="text-xs font-bold uppercase tracking-wider text-[#F7DFC7]">
+                          <span className="text-xs font-bold uppercase tracking-wider text-white">
                             Private-Always Frameworks
                           </span>
-                          <span className="px-3 py-1 rounded-full bg-[#5B9891] text-white text-[10px] font-bold">
+                          <span className="px-3 py-1 rounded-full bg-[#F2B55D] text-[#111E28] text-[10px] font-bold">
                             100% Locked from Public
                           </span>
                         </div>
-                        <p className="text-xs text-[#F7DFC7]/90">
+                        <p className="text-xs text-[#F7DFC7]">
                           Neither guests nor other members can ever view these personal self-development tools:
                         </p>
                         <div className="grid grid-cols-2 gap-2.5 text-xs">
-                          <div className="p-3 rounded-xl bg-black/30 border border-[#D98408]/40">
+                          <div className="p-3 rounded-xl bg-white/15 border border-white/25">
                             <span className="font-bold text-white block">3. My 80/20 Chart</span>
-                            <span className="text-[11px] text-[#F7DFC7]/80">
+                            <span className="text-[11px] text-[#F7DFC7]">
                               Deep work and spiritual efficiency tracker.
                             </span>
                           </div>
-                          <div className="p-3 rounded-xl bg-black/30 border border-[#D98408]/40">
+                          <div className="p-3 rounded-xl bg-white/15 border border-white/25">
                             <span className="font-bold text-white block">
                               4. Islamized Wheel
                             </span>
-                            <span className="text-[11px] text-[#F7DFC7]/80">
+                            <span className="text-[11px] text-[#F7DFC7]">
                               Holistic development across 8 spiritual facets.
                             </span>
                           </div>
@@ -471,9 +471,9 @@ export function ProfileEngineSection() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     href="#auth-register"
-                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-[#111E28] hover:bg-[#5B9891] text-[#F7DFC7] hover:text-white text-xs font-bold shadow-md transition-all border border-[#D98408]/50"
+                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-[#D98408] hover:bg-[#B86E04] text-white text-xs font-bold shadow-md transition-all border border-[#F2B55D]"
                   >
-                    <UserCheck className="w-4 h-4 text-[#D98408]" />
+                    <UserCheck className="w-4 h-4 text-white" />
                     <span>Start Your Personal Profile Today</span>
                   </motion.a>
                 </div>
