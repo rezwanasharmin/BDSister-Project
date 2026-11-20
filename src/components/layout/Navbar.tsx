@@ -114,12 +114,12 @@ export function Navbar() {
               </span>
             </Link>
 
-            <a
-              href="#forums"
+            <Link
+              href="/forums"
               className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#111E28] hover:bg-white hover:text-[#5B9891] hover:shadow-2xs transition-all whitespace-nowrap"
             >
               Forums
-            </a>
+            </Link>
 
             <a
               href="#profiles"
@@ -366,13 +366,13 @@ export function Navbar() {
                 HALAL
               </span>
             </Link>
-            <a
-              href="#forums"
+            <Link
+              href="/forums"
               onClick={() => setMobileMenuOpen(false)}
               className="block px-3 py-2.5 rounded-xl text-sm font-semibold text-[#111E28] hover:bg-[#F7DFC7]/40 hover:text-[#5B9891]"
             >
               Discussion Forums
-            </a>
+            </Link>
             <a
               href="#profiles"
               onClick={() => setMobileMenuOpen(false)}
