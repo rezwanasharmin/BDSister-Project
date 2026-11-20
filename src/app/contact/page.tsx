@@ -175,178 +175,184 @@ export default function ContactPage() {
       {/* ========================================================= */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Left 7 Cols: Interactive Direct Inquiry Form */}
-            <div className="lg:col-span-7 bg-white rounded-3xl border border-[#F7DFC7] p-6 sm:p-8 shadow-sm">
-              <div className="mb-6">
-                <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#111E28]">
-                  Send an Official Inquiry
-                </h2>
-                <p className="text-xs text-stone-600 mt-1">
-                  Fill in the details below. Our female administration will follow up promptly via email.
-                </p>
-              </div>
-
-              {isSuccess ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="p-8 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-3"
-                >
-                  <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
-                  <h3 className="font-serif text-lg font-bold text-emerald-900">
-                    Inquiry Received with Care!
-                  </h3>
-                  <p className="text-xs text-emerald-700 leading-relaxed max-w-md mx-auto">
-                    Jazakillahu Khairan, Sister <strong>{fullName}</strong>. Your inquiry regarding{" "}
-                    <strong>{subject}</strong> has been logged. Our administrative team will reply to{" "}
-                    <strong>{email}</strong> within 24-48 business hours.
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            {/* Left 50% Equal Width & Equal Height: Direct Inquiry Form */}
+            <div className="h-full bg-white rounded-3xl border border-[#F7DFC7] p-6 sm:p-8 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="mb-6">
+                  <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#111E28]">
+                    Send an Official Inquiry
+                  </h2>
+                  <p className="text-xs text-stone-600 mt-1">
+                    Fill in the details below. Our female administration will follow up promptly via email.
                   </p>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setIsSuccess(false);
-                      setFullName("");
-                      setEmail("");
-                      setMessage("");
-                    }}
-                    className="mt-4 px-6 py-2 rounded-full bg-emerald-700 text-white font-bold text-xs hover:bg-emerald-800 transition-colors shadow-2xs"
+                </div>
+
+                {isSuccess ? (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="p-8 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-3"
                   >
-                    Send Another Message
-                  </button>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 text-xs">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block font-bold text-[#111E28] mb-1">
-                        Full Name / Sister Title *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={fullName}
-                        onChange={(e) => setFullName(e.target.value)}
-                        placeholder="Sister's Full Name"
-                        className="w-full p-3 rounded-xl bg-[#FAF8F5] border border-[#F7DFC7] focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block font-bold text-[#111E28] mb-1">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="your.email@example.com"
-                        className="w-full p-3 rounded-xl bg-[#FAF8F5] border border-[#F7DFC7] focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block font-bold text-[#111E28] mb-1">
-                        Your Current Sister Status
-                      </label>
-                      <select
-                        value={sisterStatus}
-                        onChange={(e) => setSisterStatus(e.target.value)}
-                        className="w-full p-3 rounded-xl bg-[#FAF8F5] border border-[#F7DFC7] font-medium focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
-                      >
-                        <option value="Prospective Sister (New)">Prospective Sister (New)</option>
-                        <option value="Verified Community Member">Verified Community Member</option>
-                        <option value="Halal Artisan / Vendor">Halal Artisan / Vendor</option>
-                        <option value="Academic / Scholar Partner">Academic / Scholar Partner</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block font-bold text-[#111E28] mb-1">
-                        Inquiry Subject / Wing *
-                      </label>
-                      <select
-                        value={subject}
-                        onChange={(e) => setSubject(e.target.value)}
-                        className="w-full p-3 rounded-xl bg-[#FAF8F5] border border-[#F7DFC7] font-medium focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
-                      >
-                        <option value="General Sisterhood Inquiry">General Sisterhood Inquiry</option>
-                        <option value="Referral & KYC Verification Help">Referral & KYC Verification Help</option>
-                        <option value="The Hut Vendor Onboarding">The Hut Vendor Onboarding</option>
-                        <option value="CoP Parenting & Homeschooling">CoP Parenting & Homeschooling</option>
-                        <option value="TSPP Publication Submission">TSPP Publication Submission</option>
-                        <option value="Dispute & Fair Price Grievance">Dispute & Fair Price Grievance</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block font-bold text-[#111E28] mb-1">
-                      Your Message / Detailed Question *
-                    </label>
-                    <textarea
-                      required
-                      rows={5}
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Write your inquiry or question here with as much context as possible..."
-                      className="w-full p-3 rounded-xl bg-[#FAF8F5] border border-[#F7DFC7] focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
-                    />
-                  </div>
-
-                  <div className="pt-2 flex items-center justify-between border-t border-[#F7DFC7]/60">
-                    <span className="text-[11px] text-stone-500 font-medium flex items-center gap-1">
-                      <Lock className="w-3.5 h-3.5 text-[#5B9891]" />
-                      Handled confidentially
-                    </span>
-
+                    <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
+                    <h3 className="font-serif text-lg font-bold text-emerald-900">
+                      Inquiry Received with Care!
+                    </h3>
+                    <p className="text-xs text-emerald-700 leading-relaxed max-w-md mx-auto">
+                      Jazakillahu Khairan, Sister <strong>{fullName}</strong>. Your inquiry regarding{" "}
+                      <strong>{subject}</strong> has been logged. Our administrative team will reply to{" "}
+                      <strong>{email}</strong> within 24-48 business hours.
+                    </p>
                     <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold bg-[#D98408] hover:bg-[#D98408]/90 text-white transition-all shadow-sm group/btn"
+                      type="button"
+                      onClick={() => {
+                        setIsSuccess(false);
+                        setFullName("");
+                        setEmail("");
+                        setMessage("");
+                      }}
+                      className="mt-4 px-6 py-2 rounded-full bg-emerald-700 text-white font-bold text-xs hover:bg-emerald-800 transition-colors shadow-2xs"
                     >
-                      <span>{isSubmitting ? "Sending..." : "Submit Inquiry"}</span>
-                      <span
-                        className="inline-flex items-center justify-center transition-transform duration-300 ease-out"
-                        style={{
-                          transform: buttonClicked ? "rotate(0deg)" : "rotate(-45deg)",
-                        }}
-                      >
-                        <ArrowRight className="w-3.5 h-3.5 text-white" />
-                      </span>
+                      Send Another Message
                     </button>
-                  </div>
-                </form>
-              )}
+                  </motion.div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="flex flex-col justify-between space-y-4 text-xs">
+                    <div className="space-y-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block font-bold text-[#111E28] mb-1">
+                            Full Name / Sister Title *
+                          </label>
+                          <input
+                            type="text"
+                            required
+                            value={fullName}
+                            onChange={(e) => setFullName(e.target.value)}
+                            placeholder="Sister's Full Name"
+                            className="w-full p-3 rounded-xl bg-[#FAF8F5] border border-[#F7DFC7] focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
+                          />
+                        </div>
+
+                        <div>
+                          <label className="block font-bold text-[#111E28] mb-1">
+                            Email Address *
+                          </label>
+                          <input
+                            type="email"
+                            required
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="your.email@example.com"
+                            className="w-full p-3 rounded-xl bg-[#FAF8F5] border border-[#F7DFC7] focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block font-bold text-[#111E28] mb-1">
+                            Your Current Sister Status
+                          </label>
+                          <select
+                            value={sisterStatus}
+                            onChange={(e) => setSisterStatus(e.target.value)}
+                            className="w-full p-3 rounded-xl bg-[#FAF8F5] border border-[#F7DFC7] font-medium focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
+                          >
+                            <option value="Prospective Sister (New)">Prospective Sister (New)</option>
+                            <option value="Verified Community Member">Verified Community Member</option>
+                            <option value="Halal Artisan / Vendor">Halal Artisan / Vendor</option>
+                            <option value="Academic / Scholar Partner">Academic / Scholar Partner</option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <label className="block font-bold text-[#111E28] mb-1">
+                            Inquiry Subject / Wing *
+                          </label>
+                          <select
+                            value={subject}
+                            onChange={(e) => setSubject(e.target.value)}
+                            className="w-full p-3 rounded-xl bg-[#FAF8F5] border border-[#F7DFC7] font-medium focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
+                          >
+                            <option value="General Sisterhood Inquiry">General Sisterhood Inquiry</option>
+                            <option value="Referral & KYC Verification Help">Referral & KYC Verification Help</option>
+                            <option value="The Hut Vendor Onboarding">The Hut Vendor Onboarding</option>
+                            <option value="CoP Parenting & Homeschooling">CoP Parenting & Homeschooling</option>
+                            <option value="TSPP Publication Submission">TSPP Publication Submission</option>
+                            <option value="Dispute & Fair Price Grievance">Dispute & Fair Price Grievance</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block font-bold text-[#111E28] mb-1">
+                          Your Message / Detailed Question *
+                        </label>
+                        <textarea
+                          required
+                          rows={6}
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                          placeholder="Write your inquiry or question here with as much context as possible..."
+                          className="w-full p-3 rounded-xl bg-[#FAF8F5] border border-[#F7DFC7] focus:outline-none focus:ring-2 focus:ring-[#5B9891]"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="pt-4 flex items-center justify-between border-t border-[#F7DFC7]/60">
+                      <span className="text-[11px] text-stone-500 font-medium flex items-center gap-1">
+                        <Lock className="w-3.5 h-3.5 text-[#5B9891]" />
+                        Handled confidentially
+                      </span>
+
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold bg-[#D98408] hover:bg-[#D98408]/90 text-white transition-all shadow-sm group/btn"
+                      >
+                        <span>{isSubmitting ? "Sending..." : "Submit Inquiry"}</span>
+                        <span
+                          className="inline-flex items-center justify-center transition-transform duration-300 ease-out"
+                          style={{
+                            transform: buttonClicked ? "rotate(0deg)" : "rotate(-45deg)",
+                          }}
+                        >
+                          <ArrowRight className="w-3.5 h-3.5 text-white" />
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                )}
+              </div>
             </div>
 
-            {/* Right 5 Cols: Moderated Community Channels & Direct Desks */}
-            <div className="lg:col-span-5 space-y-4">
+            {/* Right 50% Equal Width & Equal Height: Moderated Community Channels & Direct Desks */}
+            <div className="h-full flex flex-col justify-between gap-4">
               {/* WhatsApp Broadcast Channel */}
-              <div className="p-5 rounded-3xl bg-white border border-[#F7DFC7] shadow-2xs">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#5B9891]/15 text-[#5B9891] flex items-center justify-center font-bold">
-                    WA
+              <div className="p-5 sm:p-6 rounded-3xl bg-white border border-[#F7DFC7] shadow-2xs flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 rounded-xl bg-[#5B9891]/15 text-[#5B9891] flex items-center justify-center font-bold">
+                      WA
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-sm text-[#111E28]">
+                        Official WhatsApp Channel
+                      </h3>
+                      <p className="text-[11px] text-stone-500">
+                        Daily announcements, events & member deals
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-sm text-[#111E28]">
-                      Official WhatsApp Channel
-                    </h3>
-                    <p className="text-[11px] text-stone-500">
-                      Daily announcements, events & member deals
-                    </p>
-                  </div>
+                  <p className="text-xs text-stone-600 leading-relaxed mb-4">
+                    Broadcast-only private channel. Your phone number is shielded and invisible to other members.
+                  </p>
                 </div>
-                <p className="text-xs text-stone-600 leading-relaxed mb-3">
-                  Broadcast-only private channel. Your phone number is shielded and invisible to other members.
-                </p>
                 <button
                   type="button"
                   onClick={() => alert("Redirecting to WhatsApp Community Circle for verified sisters")}
-                  className="w-full py-2 rounded-full bg-[#FAF8F5] hover:bg-[#F7DFC7] border border-[#F7DFC7] text-[#111E28] font-bold text-xs transition-colors flex items-center justify-center gap-2"
+                  className="w-full py-2.5 rounded-full bg-[#FAF8F5] hover:bg-[#F7DFC7] border border-[#F7DFC7] text-[#111E28] font-bold text-xs transition-colors flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-3.5 h-3.5 text-[#5B9891]" />
                   <span>Join Verified WhatsApp Circle</span>
@@ -354,27 +360,29 @@ export default function ContactPage() {
               </div>
 
               {/* Telegram Community Channel */}
-              <div className="p-5 rounded-3xl bg-white border border-[#F7DFC7] shadow-2xs">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#D98408]/15 text-[#D98408] flex items-center justify-center font-bold">
-                    TG
+              <div className="p-5 sm:p-6 rounded-3xl bg-white border border-[#F7DFC7] shadow-2xs flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 rounded-xl bg-[#D98408]/15 text-[#D98408] flex items-center justify-center font-bold">
+                      TG
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-sm text-[#111E28]">
+                        Telegram Knowledge Circle
+                      </h3>
+                      <p className="text-[11px] text-stone-500">
+                        Study halaqahs, book clubs & resources
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-sm text-[#111E28]">
-                      Telegram Knowledge Circle
-                    </h3>
-                    <p className="text-[11px] text-stone-500">
-                      Study halaqahs, book clubs & resources
-                    </p>
-                  </div>
+                  <p className="text-xs text-stone-600 leading-relaxed mb-4">
+                    Threaded sisterhood discussions and real-time updates from TSPP and MIDJ contributors.
+                  </p>
                 </div>
-                <p className="text-xs text-stone-600 leading-relaxed mb-3">
-                  Threaded sisterhood discussions and real-time updates from TSPP and MIDJ contributors.
-                </p>
                 <button
                   type="button"
                   onClick={() => alert("Redirecting to Telegram Knowledge Circle for verified sisters")}
-                  className="w-full py-2 rounded-full bg-[#FAF8F5] hover:bg-[#F7DFC7] border border-[#F7DFC7] text-[#111E28] font-bold text-xs transition-colors flex items-center justify-center gap-2"
+                  className="w-full py-2.5 rounded-full bg-[#FAF8F5] hover:bg-[#F7DFC7] border border-[#F7DFC7] text-[#111E28] font-bold text-xs transition-colors flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-3.5 h-3.5 text-[#D98408]" />
                   <span>Join Telegram Circle</span>
@@ -382,18 +390,20 @@ export default function ContactPage() {
               </div>
 
               {/* Weekly Digest Newsletter Card */}
-              <div className="p-5 rounded-3xl bg-[#5B9891] text-white shadow-md border border-[#477C76]">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#F7DFC7] mb-2">
-                  <Mail className="w-4 h-4" />
-                  <span>Weekly Sisterhood Digest</span>
+              <div className="p-5 sm:p-6 rounded-3xl bg-[#5B9891] text-white shadow-md border border-[#477C76] flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#F7DFC7] mb-2">
+                    <Mail className="w-4 h-4" />
+                    <span>Weekly Sisterhood Digest</span>
+                  </div>
+                  <h3 className="font-serif text-lg font-bold">
+                    Curated Islamic Essays & Deals
+                  </h3>
+                  <p className="text-xs text-[#F7DFC7] leading-relaxed mt-1">
+                    Receive weekly essays from MIDJ, recommended books from TSPP, and exclusive BDSisters coupons.
+                  </p>
                 </div>
-                <h3 className="font-serif text-lg font-bold">
-                  Curated Islamic Essays & Deals
-                </h3>
-                <p className="text-xs text-[#F7DFC7] leading-relaxed mt-1">
-                  Receive weekly essays from MIDJ, recommended books from TSPP, and exclusive BDSisters coupons.
-                </p>
-                <div className="mt-3 flex gap-2">
+                <div className="mt-4 flex gap-2">
                   <input
                     type="email"
                     placeholder="Enter sister email..."
