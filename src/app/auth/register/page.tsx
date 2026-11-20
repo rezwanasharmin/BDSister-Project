@@ -131,7 +131,7 @@ export default function RegisterPage() {
       {/* ========================================================= */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Step Progress Tracker */}
+          {/* Step Progress Tracker (Interactive Clickable Stepper) */}
           <div className="mb-10 max-w-2xl mx-auto">
             <div className="flex items-center justify-between relative">
               <div className="absolute top-1/2 left-0 right-0 h-1 bg-stone-200 -translate-y-1/2 z-0" />
@@ -159,30 +159,36 @@ export default function RegisterPage() {
                 const isCurrent = currentStep === item.step;
 
                 return (
-                  <div key={item.step} className="relative z-10 flex flex-col items-center">
+                  <button
+                    key={item.step}
+                    type="button"
+                    onClick={() => setCurrentStep(item.step as any)}
+                    className="relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none"
+                    title={`Click to go to Step ${item.step}: ${item.label}`}
+                  >
                     <div
-                      className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs transition-all shadow-2xs ${
+                      className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs transition-all duration-200 shadow-md group-hover:scale-110 ${
                         isPassed
-                          ? "bg-[#5B9891] text-white"
+                          ? "bg-[#5B9891] text-white group-hover:bg-[#477C76]"
                           : isCurrent
-                          ? "bg-[#D98408] text-white ring-4 ring-[#F7DFC7]"
-                          : "bg-white text-stone-400 border border-stone-300"
+                          ? "bg-[#D98408] text-white ring-4 ring-[#F7DFC7] shadow-lg scale-105"
+                          : "bg-white text-stone-600 border-2 border-[#F7DFC7] group-hover:border-[#D98408] group-hover:text-[#D98408]"
                       }`}
                     >
-                      {isPassed ? <Check className="w-4 h-4" /> : item.step}
+                      {isPassed ? <Check className="w-5 h-5" /> : item.step}
                     </div>
                     <span
-                      className={`text-[10px] sm:text-xs font-bold mt-2 whitespace-nowrap ${
+                      className={`text-[10px] sm:text-xs font-bold mt-2 whitespace-nowrap transition-colors ${
                         isCurrent
                           ? "text-[#D98408]"
                           : isPassed
                           ? "text-[#5B9891]"
-                          : "text-stone-400"
+                          : "text-stone-500 group-hover:text-[#D98408]"
                       }`}
                     >
                       {item.label}
                     </span>
-                  </div>
+                  </button>
                 );
               })}
             </div>
@@ -308,9 +314,8 @@ export default function RegisterPage() {
 
                     <button
                       type="button"
-                      disabled={!fullName.trim() || !email.trim() || password.length < 6}
                       onClick={handleNextStep}
-                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold bg-[#D98408] hover:bg-[#D98408]/90 disabled:opacity-50 text-white transition-all shadow-sm group/btn"
+                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold bg-[#D98408] hover:bg-[#D98408]/90 text-white transition-all shadow-sm group/btn"
                     >
                       <span>Proceed to Step 2</span>
                       <span
@@ -567,9 +572,8 @@ export default function RegisterPage() {
 
                     <button
                       type="button"
-                      disabled={!uploadedFile || !agreePrivacy || !agreeAdab}
                       onClick={handleNextStep}
-                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold bg-[#D98408] hover:bg-[#D98408]/90 disabled:opacity-50 text-white transition-all shadow-sm group/btn"
+                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold bg-[#D98408] hover:bg-[#D98408]/90 text-white transition-all shadow-sm group/btn"
                     >
                       <span>Submit for Verification</span>
                       <span
