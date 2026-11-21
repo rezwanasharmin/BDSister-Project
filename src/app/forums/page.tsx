@@ -567,7 +567,9 @@ export default function ForumsPage() {
                           <span>Started by</span>
                           <span className="font-semibold text-stone-800">{topic.authorSister}</span>
                           {topic.isVerifiedMember && (
-                            <CheckCircle2 className="w-3.5 h-3.5 text-[#5B9891]" title="Verified Sister Member" />
+                            <span title="Verified Sister Member">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#5B9891]" />
+                            </span>
                           )}
                         </div>
 

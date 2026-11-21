@@ -632,7 +632,9 @@ export default function ShopPage() {
                           <div className="flex items-center gap-1.5">
                             <span className="font-semibold text-[#111E28]">{product.brandName}</span>
                             {product.brandVerified && (
-                              <CheckCircle2 className="w-3.5 h-3.5 text-[#5B9891]" title="Verified Sister Brand" />
+                              <span title="Verified Sister Brand">
+                                <CheckCircle2 className="w-3.5 h-3.5 text-[#5B9891]" />
+                              </span>
                             )}
                           </div>
                           <div className="flex items-center gap-1 text-[#D98408] font-bold text-[11px]">

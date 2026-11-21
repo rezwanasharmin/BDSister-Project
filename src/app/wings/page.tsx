@@ -122,6 +122,7 @@ const ALL_WINGS: DetailedWing[] = [
   {
     id: "hut",
     code: "The Hut Halal Network",
+    name: "The Hut Halal Network",
     banglaTitle: "দ্য হাট হালাল নেটওয়ার্ক (কারিগর ও হালাল উৎপাদক গিল্ড)",
     tagline: "Vendor Registrations & Halal Artisan Guild",
     roleInBDSisters: "Empowers home-based makers, modesty couturiers, Sunnah herbal formulators, and women-led ethical suppliers.",
